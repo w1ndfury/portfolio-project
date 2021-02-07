@@ -1,0 +1,17 @@
+.header-wraper {
+    position:relative;
+    background-color:black;
+    background-size:cover;
+    height:100vh;
+}
+.main-dialogue {
+    padding-top: 30vh;
+    height: 10vh;
+    text-align: center;
+    font-size: 30px;
+}
+
+.typed-text {
+    color:white;
+    z-index:2;
+}
