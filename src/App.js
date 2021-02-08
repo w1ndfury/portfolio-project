@@ -3,33 +3,32 @@ import React from "react";
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import Particles from "react-particles-js"
-import Header from './components/Header';
+import MyParticles from './components/MyParticles'
+import Header from './components/Header'
+import Navbar from './components/Navbar'
+import Language from './components/Language'
 
 function App() {
-  return (
-      <>
-          <Particles
-              params={{
-                  particles: {
-                      number: {
-                          value: 30,
-                          density: {
-                              enable: true,
-                              value_area: 1000
-                          },
-                      line_linked: {
-                          shadow: {
-                              enable: true,
-                              color: "#ffffff",
-                              blur: 5
-                          }
-                      }
-                      }
-                  }
-              }} />
-          <Header/>
-      </>
+    return (
+        <div className="my_app">
+        
+            <div class="container-fluid px-0">
+                <div class="row no-gutters">
+                    <div class="col-sm-3">
+                        <MyParticles />
+                        <Language/>
+                    </div>
+                    <div class="col-sm-6">
+                            <MyParticles />
+                            <Header/>
+                    </div>
+                    <div class="col-sm-3">
+                        <MyParticles />
+                        <Language/>
+                    </div>
+                </div>
+            </div>
+        </div>
   );
 }
 

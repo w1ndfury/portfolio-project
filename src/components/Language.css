@@ -1,0 +1,12 @@
+.language-wraper {
+    position: relative;
+    background-color: black;
+    height: 100vh;
+}
+
+
+.p-wraper {
+    color: black;
+    z-index: 1;
+    text-align:right;
+}

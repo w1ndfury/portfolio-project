@@ -1,12 +1,3 @@
-.App {
-  text-align: center;
-}
-
-/*.......................... PARTICLES JS ..........................*/
-
-.tsparticles-canvas-el {
-    position: absolute;
-    height:100vh;
-    width:100vw;
-    z-index:1;
+.my_app {
+  background-color:black;
 }
