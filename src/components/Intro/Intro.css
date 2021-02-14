@@ -84,7 +84,7 @@ input:focus, textarea:focus, select:focus {
 
 .btn-continue {
     margin-top: 5px;
-    animation: 1s fadeIn;
+    animation: 13s fadeIn;
     animation-fill-mode: forwards;
     visibility: hidden;
 }
