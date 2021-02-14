@@ -8,8 +8,10 @@ function About() {
     return (
         <div>
             <MyParticles />
-            <div className="about-wraper">      
-                <p>About: I will develop this section soon.</p>
+            <div className="about-wraper">
+                <div className="about-text">      
+                    <p>About: I will develop this section soon.</p>
+                </div>
             </div>
         </div>
     );

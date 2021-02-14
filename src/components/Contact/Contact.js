@@ -2,6 +2,8 @@ import React from "react";
 import './Contact.css';
 import MyParticles from '../MyParticles/MyParticles'
 
+import ContactForm from './ContactForm'
+
 
 
 function Contact() {
@@ -9,7 +11,7 @@ function Contact() {
         <div>
             <MyParticles />
             <div className="contact-wraper">
-                <p>Contact: I will develop this section soon.</p>
+                <ContactForm/>
             </div>
         </div>
     );
