@@ -11,7 +11,9 @@ function Contact() {
         <div>
             <MyParticles />
             <div className="contact-wraper">
-                <ContactForm/>
+                <div className="contact-form">
+                    <ContactForm />
+                </div>
             </div>
         </div>
     );

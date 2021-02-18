@@ -7,12 +7,9 @@ html {
     z-index: 1;
     text-align: center;
     padding-bottom: 20vh;
-    padding-top: 20vh;
+    padding-top: 15vh;
     height: 100vh;
 }
-
-
-
 
 /*-----------------------------------------------------------------------------*/
 .first-q {
@@ -20,13 +17,9 @@ html {
     color: #e3e3e3;
 }
 
-.typed-text {
-    color: #e3e3e3;
-    font-size: 37px;
-}
-
 .ai-talking {
-    padding-top: 5vh;
+    font-size: 24px;
+    color: #e3e3e3;
 }
 
 input {
@@ -84,10 +77,11 @@ input:focus, textarea:focus, select:focus {
 
 .btn-continue {
     margin-top: 5px;
-    animation: 13s fadeIn;
+    animation: 3s fadeIn;
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+
 
 
 @keyframes fadeIn {
@@ -99,12 +93,8 @@ input:focus, textarea:focus, select:focus {
         visibility: visible;
     }
 }
-
-
-/*---------------------------- down arrow ---------------------------*/
-.down-arrow {
-    height: 40px;
-    width: 40px;
+/*---------------------------- arrow up ---------------------------*/
+.arrow-up-div {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -113,15 +103,39 @@ input:focus, textarea:focus, select:focus {
     padding: 0;
     cursor: pointer;
     text-align: center;
+    padding-bottom:10px;
+    
 }
 
-.down-arrow a {
-    color: #fff;
+.arrow-up-div a {
+    text-decoration: none;
+    background-color: black;
+    color: lightgray;
+    border-radius: 100px;
+    padding:5px;
 }
 
-.down-arrow a:hover {
-    color: #999;
+.arrow-up-div a:hover {
+    background-color:lightgray;
+    color:black;
     text-decoration: none;
 }
 
+.copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    margin: 4px 4px;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+@media(max-width:560px) {
+    .copyright {
+        padding-bottom: 10px;
+    }
+}
 

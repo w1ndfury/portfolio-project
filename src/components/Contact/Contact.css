@@ -8,6 +8,21 @@
     width: 100%;
     color: white;
     font-size: 24px;
+    padding-bottom: 10vh;
+    padding-top: 15vh;
+    margin-bottom: 10vh;
+}
+
+.contact-form {
+    background-color: black;
+    opacity: 1;
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 5vh;
+    padding-top: 10vh;
+    overflow-y: hidden;
 }
 
 @media(max-width:768px) {

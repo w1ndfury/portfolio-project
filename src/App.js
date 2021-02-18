@@ -6,26 +6,31 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import MyParticles from './components/MyParticles/MyParticles'
 import Intro from './components/Intro/Intro'
 
+
 function App() {
     return (
+       
         <div className="my_app">
-            <MyParticles />        
-            <div class="container-fluid px-0">              
-                <div class="row no-gutters">  
-                    <div class="col-md-2">
-                        <>
-                        </>
-                    </div>
-                    <div class="col-md-8 col-sm-12">                           
-                            <Intro/>
-                    </div>
-                    <div class="col-md-2">
-                        <>
-                        </>
+            
+                <MyParticles />        
+                <div class="container-fluid px-0">              
+                    <div class="row no-gutters">  
+                        <div class="col-lg-2 col-md-1">
+                            <>
+                            </>
+                        </div>
+                        <div class="col-lg-8 col-md-10 col-sm-12">                           
+                                <Intro/>
+                        </div>
+                        <div class="col-lg-2 col-md-1">
+                            <>
+                            </>
+                        </div>
                     </div>
                 </div>
+            
             </div>
-        </div>
+        
   );
 }
 

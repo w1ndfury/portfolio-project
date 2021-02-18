@@ -9,8 +9,16 @@ function About() {
         <div>
             <MyParticles />
             <div className="about-wraper">
-                <div className="about-text">      
-                    <p>About: I will develop this section soon.</p>
+                <div className="about-text">
+                    <p className="my-about-text">
+                        I am a software developer from Athens, Greece.
+                        <br></br>
+                        I am currently working on my Thesis 
+                        <br></br>
+                        as I am trying to finish my Diploma on Electrical and Computer Engineer.
+                        <br></br>
+                        I am also learning MERN stack technology since I decided to become a Full Stack Developer.                      
+                    </p>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@
     width: 100%;
     color: white;
     font-size: 24px;
-
+    
     /*smooth transition*/
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -18,22 +18,35 @@
 
 .about-text {
     background-color: black;
-    opacity: 0.8;
+    opacity: 1;
     position: relative;
     z-index: 1;
-    text-align: center;
-    padding: 80px 0;
     height: 100%;
     width: 100%;
     color: white;
     font-size: 24px;
     border: 1px solid white;
+    text-align: center;
+    vertical-align: middle;
+    overflow-y: hidden;
 }
+.my-about-text {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 2em;
+}
+
 
 @media(max-width:768px) {
     .about-wraper {
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+
+@media(max-width:560px) {
+    .about-text {
+        overflow-y: scroll;
     }
 }
 

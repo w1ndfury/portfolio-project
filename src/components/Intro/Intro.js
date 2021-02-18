@@ -59,8 +59,9 @@ class Intro extends React.Component {
                                 <Typed
                                     typedRef={(typed) => { this.typed = typed; }}
                                     className="typed-text"
-                            strings={["Hello " + "<strong>" + this.state.name + "</strong>" + "!", "My name is Panagiotis Patsoglou..", "..and I am a Software Developer!", "Welcome to my website!"]}
-                                    typeSpeed={50}
+                                    strings={["<strong>" + "Hello " + this.state.name + ", my name is Panagiotis Patsoglou." +"</br>" + "</strong>" +
+                                    "I am a Software Developer!" + "</br>" + "Welcome to my website!"]}
+                                    typeSpeed={20}
                                     backSpeed={30}
                                 />
                             }
@@ -86,16 +87,16 @@ class Intro extends React.Component {
                             <div class="container-fluid px-0">
                                 <div class="row no-gutters">
                                     <div class="col-sm-12">
-                                        <About />
+                                        <About/>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div id="experience">
                             <div class="container-fluid px-0">
-                                <div class="row no-gutters">s
+                                <div class="row no-gutters">
                                     <div class="col-sm-12">
-                                        <Experience />
+                                        <Experience/>
                                     </div>
                                 </div>
                             </div>
@@ -105,11 +106,14 @@ class Intro extends React.Component {
                                 <div class="row no-gutters">
                                     <div class="col-sm-12">
                                         <Contact />
-                                        {this.state.showUI &&
-                                            <div className="down-arrow">
-                                                <a href="#about">up</a>
-                                            </div>
-                                        }
+                                        <div className="arrow-up-div">
+                                            <a href="#about">
+                                                TOP
+                                            </a>
+                                        </div>
+                                        <div class="copyright">
+                                        <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Panagiotis Patsoglou All Rights Reserved</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
