@@ -2,15 +2,10 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    padding-bottom: 20vh;
-    padding-top: 20vh;
-    height: 100vh;
+    height: 95vh;
     width: 100%;
     color: white;
     font-size: 24px;
-    padding-bottom: 10vh;
-    padding-top: 15vh;
-    
 }
 
 .contact-form {
@@ -22,7 +17,7 @@
     vertical-align: middle;
     padding-bottom: 5vh;
     padding-top: 10vh;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 @media(max-width:768px) {
@@ -30,5 +25,13 @@
         padding-bottom: 0vh;
         padding-top: 0vh;
         font-size: 20px;
+    }
+
+    
+}
+
+@media(max-width:560px) {
+    .contact-form {
+        border: 1px solid white;
     }
 }

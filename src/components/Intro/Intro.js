@@ -5,6 +5,7 @@ import About from '../About/About'
 import Experience from '../Experience/Experience'
 import Contact from '../Contact/Contact'
 import SlideBar from '../SlideBar/SlideBar'
+import Footer from '../Footer/Footer'
 
 
 
@@ -106,18 +107,25 @@ class Intro extends React.Component {
                                 <div class="row no-gutters">
                                     <div class="col-sm-12">
                                         <Contact />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="footer">
+                            <div class="container-fluid px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-sm-12">
+                                        <Footer />
                                         <div className="arrow-up-div">
                                             <a href="#about">
                                                 TOP
-                                            </a>
-                                        </div>
-                                        <div class="copyright">
-                                        <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Panagiotis Patsoglou All Rights Reserved</p>
+                                                </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>           
+                        </div>
+                    
                     </div>
                 }
 

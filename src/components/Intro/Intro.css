@@ -121,21 +121,9 @@ input:focus, textarea:focus, select:focus {
     text-decoration: none;
 }
 
-.copyright {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    margin: 4px 4px;
-    padding: 0;
-    cursor: pointer;
-    text-align: center;
-    
-}
-
-@media(max-width:560px) {
-    .copyright {
-        padding-bottom: 10px;
+@media(max-height:617px) {
+    #footer {
+        visibility: hidden;
     }
 }
 

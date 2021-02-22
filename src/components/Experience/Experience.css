@@ -1,40 +1,42 @@
 .experience-wraper {
     position: relative;
     z-index: 1;
-    text-align: center;
-    padding-bottom: 10vh;
-    padding-top: 10vh;
+    padding-bottom: 30vh;
+    padding-top: 30vh;
     height: 100vh;
-    width: 100%;   
+    width: 100%;
+    color: white;
     font-size: 24px;
-    
 }
 
 .experience-text {
     background-color: black;
-    color: lightgray;
+    opacity: 1;
     position: relative;
-    height: 100%;
+    z-index: 1;
+    height: auto;
     width: 100%;
-    border: 1px solid lightgray;
+    color: white;
+    font-size: 24px;
+    border: 1px solid white;
     text-align: center;
-    overflow-y: hidden;
-    padding: 10px;
-    overflow-y: hidden;
+    vertical-align: middle;
+    overflow-y: auto;
+    
 }
 
-
-
-.inside-1 {
-    height: 50%;
-    text-align: left;
-    color: white;
-    font-size: 18px;
+ul#menu li {
+    display:flex;
+    
 }
 
 @media(max-width:560px) {
+    .experience-wraper {
+        padding-bottom: 0vh;
+        padding-top: 0vh;
+    }
     .experience-text {
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 
 }
@@ -42,7 +44,7 @@
 .my-link {
     z-index: 1;
     cursor: pointer;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
 }
 
 .my-link a {
