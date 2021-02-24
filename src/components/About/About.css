@@ -1,12 +1,13 @@
 .about-wraper {
     position: relative;
     z-index: 1;
-    padding-bottom: 30vh;
-    padding-top: 30vh;
+    padding-bottom: 28vh;
+    padding-top: 28vh;
     height: 100vh;
     width: 100%;
     color: white;
     font-size: 20px;  
+    
     /*smooth transition*/
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -25,12 +26,14 @@
     color: white;
     border: 1px solid white;
     text-align: center;
-    overflow-y: auto;
     padding-bottom: 10vh;
     padding-top: 10vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    overflow-y: auto;
 }
 .my-about-text {
-    padding-top: 1.2em;
+    padding-top: 1em;
 }
 
 
@@ -39,19 +42,28 @@
         padding-left: 10px;
         padding-right: 10px;
     }
-}
-
-@media(max-width:560px) {
-    .about-text {
-        overflow-y: scroll;
-        padding-bottom: 0vh;
-        padding-top: 0vh;
-    }
     .my-about-text {
         text-align: center;
         vertical-align: middle;
         padding-top: 1em;
     }
+}
+
+@media(max-width:560px) {
+    .about-wraper {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .about-text {
+        overflow-y: auto;
+        padding-bottom: 10vh;
+        padding-top: 10vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+    }
+    
 }
 
 

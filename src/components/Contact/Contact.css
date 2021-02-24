@@ -11,27 +11,28 @@
 .contact-form {
     background-color: black;
     opacity: 1;
+    height: 100%;
+    width: 100%;
     color: white;
-    border: 1px solid white;
     text-align: center;
     vertical-align: middle;
-    padding-bottom: 5vh;
+    padding-bottom: 10vh;
     padding-top: 10vh;
     overflow-y: auto;
 }
 
 @media(max-width:768px) {
     .contact-wraper {
-        padding-bottom: 0vh;
-        padding-top: 0vh;
-        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    
 }
 
 @media(max-width:560px) {
     .contact-form {
         border: 1px solid white;
+        padding-bottom: 0vh;
+        padding-top: 20px;
     }
 }
