@@ -1,5 +1,26 @@
 /*----------------------------- slidebar ----------------------------------*/
 
+.slidebar_background{
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    /*smooth transition*/
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+    background-color: rgba(36, 36, 36, 0.1);
+}
+
 .my_slidebar {
     position: fixed;
     top: 50%;
@@ -9,17 +30,21 @@
     margin: 0;
     padding: 0;
     padding-left: 5px;
+    padding-right: 5px;
     /*smooth transition*/
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
     -ms-animation: fadein 2s; /* Internet Explorer */
     -o-animation: fadein 2s; /* Opera < 12.1 */
     animation: fadein 2s;
+    
 }
 
 
-.my_slidebar li {
+
+.my_slidebar li {   
     list-style: none;
+    display: block;
 }
 
 .my_slidebar li a {
@@ -73,6 +98,9 @@
 
 @media(max-width:992px) {
     .my_slidebar {
+        visibility: hidden;
+    }
+    .slidebar_background {
         visibility: hidden;
     }
 }

@@ -1,28 +1,27 @@
 .experience-wraper {
     position: relative;
     z-index: 1;
-    padding-bottom: 20vh;
-    padding-top: 20vh;
+    padding-top: 25vh;
     height: 100vh;
     width: 100%;
     color: white;
     font-size: 24px;
+    
 }
 
 .experience-text {
-    background-color: black;
-    opacity: 1;
+    background-color: transparent;
     position: relative;
     z-index: 1;
-    height: 100%;
+    height: auto;
     width: 100%;
     color: white;
-    font-size: 24px;
-    border: 1px solid white;
     text-align: center;
     vertical-align: middle;
     overflow-y: auto;
-    
+    border: 1px solid white;
+    padding-top: 20px; 
+    padding-bottom: 20px;     
 }
 
 ul#menu li {
@@ -30,13 +29,34 @@ ul#menu li {
     
 }
 
+@media(max-width:1000px) {
+    .experience-wraper {
+        overflow-y: auto;
+        padding-top: 0vh;    
+    }
+
+}
+
 @media(max-width:768px) {
     .experience-wraper {
         padding-left: 10px;
         padding-right: 10px;
+        padding-top: 0vh;
+        overflow-y: auto;    
+    }
+    .work{
+        padding-top: 10px;
+        border: none;
+        background-color:black;
+        height: auto;
+        overflow-y: auto;
+    }
+    .experience-text {
+        border:none;   
     }
 
 }
+
 
 @media(max-width:560px) {
     .experience-wraper {
@@ -69,4 +89,41 @@ ul#menu li {
     background-color: lightgray;
     color: black;
     text-decoration: none;
+}
+
+.work{
+    font-size: 24px;
+    padding-top: 10px;
+    border: 2px solid white;
+    background-color:black;
+    height: 420px;
+    width: 400px;
+}
+
+button.rec-dot{
+    background-color: rgb(36, 36, 36);
+    box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+    box-shadow: 0 0 1px 3px rgba(255, 255, 255, 0.5);
+  }
+
+  /* square buttons */
+.rec.rec-arrow {
+    border-radius: 0;
+}
+/* round buttons on hover */
+.rec.rec-arrow:hover {
+    border-radius: 50%;
+    background-color: grey;
+    color:grey;
+}
+/* hide disabled buttons */
+.rec.rec-arrow:disabled {
+    visibility: 0.2;
+}
+
+.rec.rec-arrow:enabled:hover {
+    background-color: grey;
 }

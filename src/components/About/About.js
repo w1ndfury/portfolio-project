@@ -15,7 +15,7 @@ function About() {
                         <br></br>
                         I am currently working on my Thesis 
                         <br></br>
-                        as I am trying to finish my Diploma on Electrical and Computer Engineer.
+                        as I am trying to finish my Diploma on Electrical and Computer Engineering.
                         <br></br>
                         I am also learning MERN stack technology since I decided to become a Full Stack Developer.                      
                     </p>

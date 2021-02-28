@@ -6,6 +6,8 @@ import Experience from '../Experience/Experience'
 import Contact from '../Contact/Contact'
 import SlideBar from '../SlideBar/SlideBar'
 import Footer from '../Footer/Footer'
+import MyParticles from '../MyParticles/MyParticles'
+
 
 
 
@@ -20,7 +22,6 @@ class Intro extends React.Component {
 
         this.onButtonClickHandler = this.onButtonClickHandler.bind(this);
         this.onButtonClickHandler2 = this.onButtonClickHandler2.bind(this);
-        /*this.myStyle = this.myStyle.bind(this);*/
     }
 
     onButtonClickHandler = () => {
@@ -33,8 +34,7 @@ class Intro extends React.Component {
 
     render() {
         return (
-            <div>
-               
+            <div>                     
                 {!this.state.showUI &&
                     <div className="intro-wraper" id="home">
                         {!this.state.showMessage1 &&
@@ -69,68 +69,75 @@ class Intro extends React.Component {
                         </div>
                         {this.state.showMessage1 && this.state.name != null && !this.state.showUI &&
                             <div className="btn-continue">
-                        <a href="#about" className="btn-continue-style" id="btn-continue" onClick={this.onButtonClickHandler2}>continue</a>
+                                <a href="#about" className="btn-continue-style" id="btn-continue" onClick={this.onButtonClickHandler2}>continue</a>
                             </div>
                         }
                     </div>
                 }
 
-            
-                {this.state.showUI &&
-                    <div id="slidebar" className="slidebar">
-                        <SlideBar />
-                    </div>
-                }
-                
-                {this.state.showUI &&
-                    <div className="page-after-intro" id="container">
-                        <div id="about">
-                            <div class="container-fluid px-0">
-                                <div class="row no-gutters">
-                                    <div class="col-sm-12">
-                                        <About/>
-                                    </div>
-                                </div>
+                {this.state.showUI &&                          
+                    <div class="container-fluid px-0">              
+                        <div class="row no-gutters">
+                            <div class="col-lg-2 col-md-1">                                                
+                                    <div id="slidebar" className="slidebar">
+                                        <MyParticles />
+                                        <SlideBar />
+                                    </div>                      
                             </div>
-                        </div>
-                        <div id="experience">
-                            <div class="container-fluid px-0">
-                                <div class="row no-gutters">
-                                    <div class="col-sm-12">
-                                        <Experience/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="contact">
-                            <div class="container-fluid px-0">
-                                <div class="row no-gutters">
-                                    <div class="col-sm-12">
-                                        <Contact />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="footer">
-                            <div class="container-fluid px-0">
-                                <div class="row no-gutters">
-                                    <div class="col-sm-12">
-                                        <Footer />
-                                        <div className="arrow-up-div">
-                                            <a href="#about">
-                                                TOP
-                                                </a>
+                            <div class="col-lg-8 col-md-10 col-sm-12">  
+                                <div className="page-after-intro" id="container">
+                                    <div id="about">
+                                        <div class="container-fluid px-0">
+                                            <div class="row no-gutters">
+                                                <div class="col-sm-12">
+                                                    <About/>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div id="experience">
+                                        <div class="container-fluid px-0">
+                                            <div class="row no-gutters">
+                                                <div class="col-sm-12">
+                                                    <Experience/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="contact">
+                                        <div class="container-fluid px-0">
+                                            <div class="row no-gutters">
+                                                <div class="col-sm-12">
+                                                    <Contact />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="footer">
+                                        <div class="container-fluid px-0">
+                                            <div class="row no-gutters">
+                                                <div class="col-sm-12">
+                                                    <Footer />
+                                                    <div className="arrow-up-div">
+                                                        <a href="#about">
+                                                            TOP
+                                                            </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                
                                 </div>
                             </div>
+                            <div class="col-lg-2 col-md-1">
+                                <>
+                                <MyParticles/>
+                                </>
+                            </div>
                         </div>
-                    
                     </div>
                 }
-
-            </div>
-            
+            </div>         
         );
     }
 }
