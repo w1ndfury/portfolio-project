@@ -7,7 +7,7 @@ import MyParticles from '../MyParticles/MyParticles'
 function About() {
     return (
         <div>
-            <MyParticles />
+            
             <div className="about-wraper">
                 <div className="about-text">
                     <p className="my-about-text">

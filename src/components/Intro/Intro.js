@@ -1,5 +1,6 @@
 import React from "react";
 import Typed from "react-typed"
+
 import './Intro.css';
 import About from '../About/About'
 import Experience from '../Experience/Experience'
@@ -7,6 +8,8 @@ import Contact from '../Contact/Contact'
 import SlideBar from '../SlideBar/SlideBar'
 import Footer from '../Footer/Footer'
 import MyParticles from '../MyParticles/MyParticles'
+
+import { Container, Row, Col } from 'reactstrap';
 
 
 
@@ -75,67 +78,30 @@ class Intro extends React.Component {
                     </div>
                 }
 
-                {this.state.showUI &&                          
-                    <div class="container-fluid px-0">              
-                        <div class="row no-gutters">
-                            <div class="col-lg-2 col-md-1">                                                
-                                    <div id="slidebar" className="slidebar">
-                                        <MyParticles />
-                                        <SlideBar />
-                                    </div>                      
-                            </div>
-                            <div class="col-lg-8 col-md-10 col-sm-12">  
-                                <div className="page-after-intro" id="container">
-                                    <div id="about">
-                                        <div class="container-fluid px-0">
-                                            <div class="row no-gutters">
-                                                <div class="col-sm-12">
-                                                    <About/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="experience">
-                                        <div class="container-fluid px-0">
-                                            <div class="row no-gutters">
-                                                <div class="col-sm-12">
-                                                    <Experience/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="contact">
-                                        <div class="container-fluid px-0">
-                                            <div class="row no-gutters">
-                                                <div class="col-sm-12">
-                                                    <Contact />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="footer">
-                                        <div class="container-fluid px-0">
-                                            <div class="row no-gutters">
-                                                <div class="col-sm-12">
-                                                    <Footer />
-                                                    <div className="arrow-up-div">
-                                                        <a href="#about">
-                                                            TOP
-                                                            </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>                
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-1">
-                                <>
-                                <MyParticles/>
-                                </>
-                            </div>
-                        </div>
+                {this.state.showUI &&
+                    <div id="slidebar" className="sticky-navbar">
+                        <SlideBar />
                     </div>
+                }
+                {this.state.showUI &&
+                <Container className="themed-container" fluid="sm" style={{ "height": "auto"}}>
+                    
+                    <Row className="justify-content-md-center">          
+                        <Col id="container" className="page-after-intro" xs={12} md={12}>
+                            <div id="about">
+                                <MyParticles />     
+                                <About/>                                       
+                            </div>
+                            <div id="experience">                                      
+                                <Experience />                                               
+                            </div>
+                            <div id="contact"> 
+                                                                                  
+                                <Contact />      
+                            </div>                                     
+                        </Col>  
+                        </Row>       
+                </Container>
                 }
             </div>         
         );

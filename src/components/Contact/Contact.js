@@ -9,7 +9,6 @@ import ContactForm from './ContactForm'
 function Contact() {
     return (
         <div>
-            <MyParticles />
             <div className="contact-wraper">
                 <div className="contact-form">
                     <ContactForm />

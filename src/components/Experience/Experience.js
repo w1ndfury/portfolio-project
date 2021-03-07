@@ -21,7 +21,6 @@ function Experience() {
 
     return (
         <div>
-            <MyParticles />
             <div className="experience-wraper">
                 <div className="experience-text">                  
                     <div class="container-fluid px-0 col-12">

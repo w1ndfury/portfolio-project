@@ -1,24 +1,49 @@
-import React from "react";
-import './SlideBar.css';
+import React, { useState } from "react";
 
-class SideNav extends React.Component{
-    render(){
-        return(
-            <div className="slidebar_background">
-                <ul className="my_slidebar">
-                    <li><a class="btn btn-about" href="#about">About</a></li>
-                    <li><a class="btn btn-experience" href="#experience">Experience</a></li>
-                    <li><a class="btn btn-contact" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        );
+
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavLink,
+    NavItem,
+    Container,
+    Label
+  } from 'reactstrap';
+
+function SlideBar() {
+
+    const [isOpen, setisOpen] = useState(false);
+
+    const toggle = ()=>{
+      setisOpen(!isOpen);
     }
+    
+    return(
+        <div>
+            <Navbar dark expand="sm" style={{"height":"8vh" ,"z-index":"2"}}>
+                <Container>
+                <NavbarToggler onClick={toggle}/>
+                
+                <Collapse isOpen={isOpen} navbar>
+                
+                <Nav className="ml-auto" navbar>
+                
+                    <NavLink class="btn btn-about" href="#about">About</NavLink> 
+                    <NavLink class="btn btn-experience" href="#experience">Experience</NavLink> 
+                    <NavLink class="btn btn-contact" href="#contact">Contact</NavLink> 
+                
+                </Nav>
+                
+                </Collapse>
+                </Container>
+            </Navbar>
+        </div>
+    );
+
 }
 
-export default class SlideBar extends React.Component {
-    render(){
-        return (
-            <SideNav/>
-        );
-    }
-}
+export default SlideBar
+

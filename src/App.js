@@ -11,7 +11,7 @@ function App() {
     return (
        
         <div className="my_app">
-          <MyParticles/>      
+          <MyParticles />   
           <Intro/> 
         </div>
         
