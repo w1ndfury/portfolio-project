@@ -1,1 +1,1 @@
-[https://w1ndfury.github.io/portfolio-project/]
+https://w1ndfury.github.io/portfolio-project/
