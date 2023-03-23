@@ -19,9 +19,14 @@
   }
 }
 
+.pp-section-about {
+  min-height: 100vh;
+  height: auto;
+  padding-top: 20%;
+}
+
 .pp-section-wraper-body {
-  background-color: var(--black);
-  opacity: 0.8;
+  background-color: var(--black-50);
   z-index: 1;
   border: 1px solid white;
   box-shadow: rgba(255, 255, 255, 0.548) 0px 1px 12px;

@@ -98,7 +98,7 @@ class Intro extends React.Component {
         {this.state.showUI && <SlideBar />}
         {this.state.showUI && (
           <div className="pp-flex-column">
-            <div className="pp-section-wraper" id="about">
+            <div className="pp-section-wraper pp-section-about" id="about">
               <About />
             </div>
             <div className="pp-section-wraper" id="experience">

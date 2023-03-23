@@ -11,10 +11,10 @@ import {
   Container,
 } from "reactstrap";
 
+import Typed from "react-typed";
+
 function SlideBar() {
   const [isOpen, setisOpen] = useState(false);
-
-  const introLabel = "</Intro>";
 
   const toggle = () => {
     setisOpen(!isOpen);
@@ -24,7 +24,16 @@ function SlideBar() {
     <Navbar dark className="pp-navbar" expand="sm">
       <Container>
         <NavbarBrand href="/" className="mr-auto">
-          {introLabel}
+          {
+            <Typed
+              className="typed-text"
+              strings={["Intro.."]}
+              typeSpeed={150}
+              backSpeed={50}
+              fadeOut={false}
+              loop={true}
+            />
+          }
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
 

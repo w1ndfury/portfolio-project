@@ -1,11 +1,13 @@
 .about-text {
   color: white;
-  padding: 2rem;
+  padding: 2rem 0;
   overflow-y: auto;
-}
-.my-about-text {
   text-align: center;
   vertical-align: middle;
+}
+
+.my-name-text {
+  line-height: 1;
 }
 
 @media (max-width: 560px) {
