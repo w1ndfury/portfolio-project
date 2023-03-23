@@ -1,111 +1,117 @@
 import React from "react";
-import Typed from "react-typed"
+import Typed from "react-typed";
 
-import './Intro.css';
-import About from '../About/About'
-import Experience from '../Experience/Experience'
-import Contact from '../Contact/Contact'
-import SlideBar from '../SlideBar/SlideBar'
-import Footer from '../Footer/Footer'
-import MyParticles from '../MyParticles/MyParticles'
+import "./Intro.css";
+import About from "../About/About";
+import Experience from "../Experience/Experience";
+import Contact from "../Contact/Contact";
+import SlideBar from "../SlideBar/SlideBar";
 
-import { Container, Row, Col } from 'reactstrap';
-
-
-
+const greetingsMessage = "Hi...";
+const firstQuestion = "What's your name?";
 
 class Intro extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            showMessage1: false,
-            showUI: false,
-            name: null
-        }
-
-        this.onButtonClickHandler = this.onButtonClickHandler.bind(this);
-        this.onButtonClickHandler2 = this.onButtonClickHandler2.bind(this);
-    }
-
-    onButtonClickHandler = () => {
-        this.setState({ showMessage1: !this.state.showMessage1 });
+  constructor(props) {
+    super(props);
+    this.state = {
+      showSummaryMessage: false,
+      showUI: false,
+      userName: null,
+      summaryAnimation: false,
     };
 
-    onButtonClickHandler2 = () => {
-        this.setState({ showUI: !this.state.showUI });
-    };
+    this.onGiveNameClickHandler = this.onGiveNameClickHandler.bind(this);
+  }
 
-    render() {
-        return (
-            <div>                     
-                {!this.state.showUI &&
-                    <div className="intro-wraper" id="home">
-                        {!this.state.showMessage1 &&
-                            <div className="first-q">
-                                <Typed
-                                    className="typed-text"
-                                    strings={["Hi...", "What's your name?"]}
-                                    typeSpeed={50}
-                                    backSpeed={40}
-                                />
-                            </div>
-                        }
-                        {!this.state.showMessage1 &&
-                            <div className="first-a">
-                                <input type="text" placeholder="Give your name.." onChange={e => this.setState({ name: e.target.value })} />
-                                {this.state.name != null &&
-                                    <button className="btn-giveYourName" onClick={this.onButtonClickHandler}>submit</button>
-                                }
-                            </div>
-                        }
-                        <div className="ai-talking">
-                            {this.state.showMessage1 && this.state.name != null && !this.state.showUI &&
-                                <Typed
-                                    typedRef={(typed) => { this.typed = typed; }}
-                                    className="typed-text"
-                                    strings={["<strong>" + "Hello " + this.state.name + ", my name is Panagiotis Patsoglou." +"</br>" + "</strong>" +
-                                    "I am a Software Developer!" + "</br>" + "Welcome to my website!"]}
-                                    typeSpeed={20}
-                                    backSpeed={30}
-                                />
-                            }
-                        </div>
-                        {this.state.showMessage1 && this.state.name != null && !this.state.showUI &&
-                            <div className="btn-continue">
-                                <a href="#about" className="btn-continue-style" id="btn-continue" onClick={this.onButtonClickHandler2}>continue</a>
-                            </div>
-                        }
-                    </div>
-                }
+  onGiveNameClickHandler = () => {
+    this.setState({ showSummaryMessage: !this.state.showSummaryMessage });
+  };
 
-                {this.state.showUI &&
-                    <div id="slidebar" className="sticky-navbar">
-                        <SlideBar />
-                    </div>
+  onCompleteGreetingsMessage = () => {
+    this.setState({ summaryAnimation: !this.state.summaryAnimation });
+    setTimeout(() => {
+      this.setState({ showUI: !this.state.showUI });
+    }, 3000);
+  };
+
+  render() {
+    return (
+      <div>
+        {!this.state.showUI && (
+          <div className="pp-flex-column intro-wraper" id="home">
+            {!this.state.showSummaryMessage && (
+              <div className="ai-question pp-margin-bottom-x-small pp-text-large-30">
+                <Typed
+                  className="typed-text"
+                  strings={[greetingsMessage, firstQuestion]}
+                  typeSpeed={25}
+                  backSpeed={20}
+                  fadeOut={true}
+                />
+              </div>
+            )}
+            {!this.state.showSummaryMessage && (
+              <div className="fade-in-2 pp-flex-row-center">
+                <input
+                  style={{ "max-width": "200px" }}
+                  className="pp-input-black pp-width-100"
+                  type="text"
+                  placeholder="Type your name..."
+                  onChange={(e) => this.setState({ userName: e.target.value })}
+                />
+                {this.state.userName != null && (
+                  <button
+                    className="btn-transparent-gray pp-margin-left-small"
+                    onClick={this.onGiveNameClickHandler}
+                  >
+                    submit
+                  </button>
+                )}
+              </div>
+            )}
+            <div className="ai-answer pp-text-xx-large">
+              <div
+                className={
+                  this.state.summaryAnimation ? "fade-out-ai-answer" : null
                 }
-                {this.state.showUI &&
-                <Container className="themed-container" fluid="sm" style={{ "height": "auto"}}>
-                    
-                    <Row className="justify-content-md-center">          
-                        <Col id="container" className="page-after-intro" xs={12} md={12}>
-                            <div id="about">
-                                <MyParticles />     
-                                <About/>                                       
-                            </div>
-                            <div id="experience">                                      
-                                <Experience />                                               
-                            </div>
-                            <div id="contact"> 
-                                                                                  
-                                <Contact />      
-                            </div>                                     
-                        </Col>  
-                        </Row>       
-                </Container>
-                }
-            </div>         
-        );
-    }
+              >
+                {this.state.showSummaryMessage &&
+                  this.state.userName != null &&
+                  !this.state.showUI && (
+                    <Typed
+                      onComplete={this.onCompleteGreetingsMessage}
+                      className="typed-text"
+                      strings={[
+                        "Hello <strong>" +
+                          this.state.userName +
+                          "</strong>, my name is Panagiotis Patsoglou.</br>I am a Software Engineer!</br> Welcome to my Portfolio Website!",
+                      ]}
+                      typeSpeed={25}
+                      backSpeed={20}
+                    />
+                  )}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {this.state.showUI && <SlideBar />}
+        {this.state.showUI && (
+          <div className="pp-flex-column">
+            <div className="pp-section-wraper" id="about">
+              <About />
+            </div>
+            <div className="pp-section-wraper" id="experience">
+              <Experience />
+            </div>
+            <div className="pp-section-wraper" id="contact">
+              <Contact />
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
 }
 
-export default Intro
+export default Intro;

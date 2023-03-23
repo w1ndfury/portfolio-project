@@ -1,38 +1,7 @@
-.contact-wraper {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    height: auto;
-    width: 100%;
-    color: white;
-    font-size: 24px;
-}
-
 .contact-form {
-    background-color: transparent;
-    opacity: 1;
-    height: 100%;
-    width: 100%;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    padding-bottom: 10vh;
-    padding-top: 10vh;
-    overflow-y: auto;
-}
-
-@media(max-width:768px) {
-    .contact-wraper {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-}
-
-@media(max-width:560px) {
-    .contact-form {
-        border: 1px solid white;
-        padding-bottom: 0vh;
-        padding-top: 20px;
-    }
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10vh 1vh;
+  overflow-y: auto;
 }

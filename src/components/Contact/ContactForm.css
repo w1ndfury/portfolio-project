@@ -1,60 +1,58 @@
 #button_submit {
-    width: 160px;
-    height: 40px;
-    transition: all 0.1s;
-    text-decoration: none;
-    font-size: 17px;
-    color: #ffffff;
-    background-color: rgba(60, 60, 60, 0.3);
-    cursor: pointer;
-    position: relative;
+  width: 160px;
+  height: 40px;
+  transition: all 0.1s;
+  text-decoration: none;
+  font-size: 17px;
+  color: var(--white);
+  background-color: rgba(60, 60, 60, 0.3);
+  cursor: pointer;
+  position: relative;
 }
 
 #button_submit::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: rgba(255,255,255,0.1);
-    transition: all 0.1s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.1s;
 }
 
 #button_submit:hover::before {
-    opacity: 0;
-    transform: scale(0.5,0.5);
+  opacity: 0;
+  transform: scale(0.5, 0.5);
 }
 
 #button_submit::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.1s;
-    border: 1px solid rgba(255,255,255,0.5);
-    transform: scale(1.2,1.2);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.1s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: scale(1.2, 1.2);
 }
 
 #button_submit:hover::after {
-    opacity: 1;
-    transform: scale(1,1);
+  opacity: 1;
+  transform: scale(1, 1);
 }
 
-.form-control{
-    background-color: transparent;
-    color: white;
-    
+.form-control {
+  background-color: transparent;
+  color: white;
 }
-
 
 .form-control:focus {
-    background-color: black;
-    border: 2px solid white;
-    color: white;
+  background-color: var(--black);
+  border: 2px solid white;
+  color: white;
 }

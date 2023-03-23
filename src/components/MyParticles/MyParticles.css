@@ -1,15 +1,10 @@
 /*.......................... PARTICLES JS ..........................*/
 
 .tsparticles-canvas-el {
-    background-color:black;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    z-index: 1;
+  background-color: var(--darkslateblue);
+  position: fixed;
+  height: 100vh !important;
+  width: 100vw !important;
+  max-width: 100%;
+  z-index: 1;
 }
-
-/*@media(max-width:768px) {
-    .particles-canvas {
-        display:none;
-    }
-}*/

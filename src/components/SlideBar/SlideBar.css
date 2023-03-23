@@ -1,0 +1,16 @@
+.pp-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--black);
+}
+
+.navbar-collapse {
+  background-color: var(--black);
+}
+
+@media (max-width: 576px) {
+  .pp-navbar {
+    background-color: var(--black);
+  }
+}

@@ -1,28 +1,20 @@
 import React from "react";
-import './About.css';
-import MyParticles from '../MyParticles/MyParticles'
-
-
+import "./About.css";
 
 function About() {
-    return (
-        <div>
-            
-            <div className="about-wraper">
-                <div className="about-text">
-                    <p className="my-about-text">
-                        I am a software developer from Athens, Greece.
-                        <br></br>
-                        I am currently working on my Thesis 
-                        <br></br>
-                        as I am trying to finish my Diploma on Electrical and Computer Engineering.
-                        <br></br>
-                        I am also learning MERN stack technology since I decided to become a Full Stack Developer.                      
-                    </p>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="pp-section-wraper-body pp-box-shadow-gray">
+      <div className="about-text">
+        <p className="my-about-text pp-text-xx-large">
+          Software engineer based in Athens, Greece.
+        </p>
+        <p className="my-about-text pp-text-small">
+          I'm currently focused on front-end development as I like to craft
+          solid and scalable front-end products with great user experience.
+        </p>
+      </div>
+    </div>
+  );
 }
 
 export default About;

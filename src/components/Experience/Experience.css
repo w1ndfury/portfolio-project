@@ -1,130 +1,85 @@
-.experience-wraper {
-    position: relative;
-    z-index: 1;
-    padding-bottom: 25vh;
-    padding-top: 25vh;
-    height: auto;
-    width: 100%;
-    color: white;
-    font-size: 24px;
-    
+.experience-text {
+  color: white;
+  overflow-y: auto;
+  padding: 32px 16px;
 }
 
-.experience-text {
-    background-color: transparent;
-    position: relative;
-    z-index: 1;
-    height: auto;
-    width: 100%;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    overflow-y: auto;
-    border: 1px solid white;
-    padding-top: 20px; 
-    padding-bottom: 20px;     
+.work {
+  padding: 16px;
+  border: 1px solid white;
+  height: 100%;
+  width: 400px;
 }
 
 ul#menu li {
-    display:flex;
-    
+  display: flex;
 }
 
-@media(max-width:1000px) {
-    .experience-wraper {
-        overflow-y: auto;
-        padding-top: 0vh;    
-    }
-
+@media (max-width: 768px) {
+  .work {
+    padding-top: 10px;
+    border: none;
+    background-color: var(--black);
+    height: auto;
+    overflow-y: auto;
+  }
+  .experience-text {
+    border: none;
+  }
 }
 
-@media(max-width:768px) {
-    .experience-wraper {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 0vh;
-        overflow-y: auto;    
-    }
-    .work{
-        padding-top: 10px;
-        border: none;
-        background-color:black;
-        height: auto;
-        overflow-y: auto;
-    }
-    .experience-text {
-        border:none;   
-    }
-
-}
-
-
-@media(max-width:560px) {
-    .experience-wraper {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-    .experience-text {
-        overflow-y: auto;
-    }
-
+@media (max-width: 560px) {
+  .experience-text {
+    overflow-y: auto;
+  }
 }
 
 .my-link {
-    z-index: 1;
-    cursor: pointer;
-    padding-bottom: 0px;
+  z-index: 1;
+  cursor: pointer;
+  padding-bottom: 0px;
 }
 
 .my-link a {
-    text-decoration: none;
-    background-color: black;
-    color: lightgray;
-    border-radius: 100px;
-    padding: 10px;
+  text-decoration: none;
+  background-color: var(--black);
+  color: lightgray;
+  border-radius: 100px;
+  padding: 10px;
 }
 
 .my-link a:hover {
-    background-color: lightgray;
-    color: black;
-    text-decoration: none;
+  background-color: lightgray;
+  color: var(--black);
+  text-decoration: none;
 }
 
-.work{
-    font-size: 24px;
-    padding-top: 10px;
-    border: 2px solid white;
-    background-color:black;
-    height: 420px;
-    width: 400px;
+button.rec-dot {
+  background-color: rgb(36, 36, 36);
+  box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-button.rec-dot{
-    background-color: rgb(36, 36, 36);
-    box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.5);
-  }
-  
-  button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
-    box-shadow: 0 0 1px 3px rgba(255, 255, 255, 0.5);
-  }
+button.rec-dot:hover,
+button.rec-dot:active,
+button.rec-dot:focus {
+  box-shadow: 0 0 1px 3px rgba(255, 255, 255, 0.5);
+}
 
-  /* square buttons */
+/* square buttons */
 .rec.rec-arrow {
-    border-radius: 0;
+  border-radius: 0;
 }
 /* round buttons on hover */
 .rec.rec-arrow:hover {
-    border-radius: 50%;
-    background-color: grey;
-    color:grey;
+  border-radius: 50%;
+  background-color: grey;
+  color: grey;
 }
 /* hide disabled buttons */
 .rec.rec-arrow:disabled {
-    visibility: 0.2;
+  visibility: 0.2;
 }
 
 .rec.rec-arrow:enabled:hover {
-    background-color: grey;
+  background-color: grey;
 }

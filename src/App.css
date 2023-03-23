@@ -1,5 +1,8 @@
-.my_app {
-    background-color: black;
-    opacity: 0.95;
-    font-family: Courier New;
+html {
+  scroll-behavior: smooth;
+}
+
+.my-app {
+  background-color: var(--black);
+  font-family: Courier New;
 }

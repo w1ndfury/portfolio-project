@@ -1,21 +1,16 @@
 import React from "react";
-import './Contact.css';
-import MyParticles from '../MyParticles/MyParticles'
+import "./Contact.css";
 
-import ContactForm from './ContactForm'
-
-
+import ContactForm from "./ContactForm";
 
 function Contact() {
-    return (
-        <div>
-            <div className="contact-wraper">
-                <div className="contact-form">
-                    <ContactForm />
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="pp-section-wraper-body pp-box-shadow-gray">
+      <div className="contact-form pp-text-xx-large">
+        <ContactForm />
+      </div>
+    </div>
+  );
 }
 
 export default Contact;
