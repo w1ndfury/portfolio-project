@@ -11,35 +11,39 @@ function Experience() {
     { width: 1200, itemToShow: 2 },
   ];
 
-  const tools_1 = [
-    "React.js",
-    "React-Flow-Renderer",
-    "Material-UI",
-    "Html",
-    "CSS",
+  const workItems = [
+    {
+      number: 1,
+      title: "Cooking-Steam-App",
+      info: "test",
+      link: "https://github.com/w1ndfury/Cooking-Steam-App",
+      tools: ["React.js", "React-Flow-Renderer", "Material-UI", "Html", "CSS"],
+    },
+    {
+      number: 2,
+      title: "Chilimon-App",
+      info: "test 2",
+      link: "https://github.com/w1ndfury/Chilimon-App",
+      tools: ["MongoDB", "Express", "React.js", "Node.js"],
+    },
   ];
-  const tools_2 = ["MongoDB", "Express", "React.js", "Node.js"];
 
   return (
     <div className="pp-section-wraper-body pp-box-shadow-gray">
       <div className="experience-text pp-text-xx-large">
-        <div class="container-fluid px-0 col-12">
-          <div class="row no-gutters">
+        <div className="container-fluid px-0 col-12">
+          <div className="row no-gutters">
             <Carousel breakPoints={breakPoints}>
-              <Work
-                number="1"
-                title="Cooking-Steam-App"
-                info="A Web Application for creating and processing cooking recipes with flowcharts, in order to create a tool for educational purposes."
-                link="https://github.com/w1ndfury/Cooking-Steam-App"
-                tools={tools_1}
-              />
-              <Work
-                number="2"
-                title="Chilimon-App"
-                info="A Web Application for learning Full Stack Development using MERN Stack Technology."
-                link="https://github.com/w1ndfury/Chilimon-App"
-                tools={tools_2}
-              />
+              {workItems?.map((item) => (
+                <Work
+                  key={item.number}
+                  number={item.number}
+                  title={item.title}
+                  info={item.info}
+                  link={item.link}
+                  tools={item.tools}
+                />
+              ))}
             </Carousel>
           </div>
         </div>

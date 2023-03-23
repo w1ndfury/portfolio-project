@@ -53,7 +53,7 @@ class Intro extends React.Component {
             {!this.state.showSummaryMessage && (
               <div className="fade-in-2 pp-flex-row-center">
                 <input
-                  style={{ "max-width": "200px" }}
+                  style={{ maxWidth: "200px" }}
                   className="pp-input-black pp-width-100"
                   type="text"
                   placeholder="Type your name..."

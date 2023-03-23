@@ -6,7 +6,7 @@ function Footer() {
     <div>
       <div className="footer-wraper pp-text-xx-large">
         <div className="footer-text pp-text-small">
-          <div class="copyright">
+          <div className="copyright">
             <p>
               Copyright &copy;
               <script>document.write(new Date().getFullYear())</script>{" "}
