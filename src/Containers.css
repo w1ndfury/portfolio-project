@@ -25,6 +25,12 @@
   padding-top: 20%;
 }
 
+.pp-section-experience,
+.pp-section-contact {
+  min-height: 100vh;
+  height: auto;
+}
+
 .pp-section-wraper-body {
   background-color: var(--black-50);
   z-index: 1;

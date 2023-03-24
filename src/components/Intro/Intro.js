@@ -101,10 +101,13 @@ class Intro extends React.Component {
             <div className="pp-section-wraper pp-section-about" id="about">
               <About />
             </div>
-            <div className="pp-section-wraper" id="experience">
+            <div
+              className="pp-section-wraper pp-section-experience"
+              id="experience"
+            >
               <Experience />
             </div>
-            <div className="pp-section-wraper" id="contact">
+            <div className="pp-section-wraper pp-section-contact" id="contact">
               <Contact />
             </div>
           </div>
