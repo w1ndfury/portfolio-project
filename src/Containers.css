@@ -32,6 +32,10 @@
   box-shadow: rgba(255, 255, 255, 0.548) 0px 1px 12px;
 }
 
+.pp-flex-row {
+  display: flex;
+}
+
 .pp-flex-row-center {
   display: flex;
   justify-content: center;
@@ -40,4 +44,12 @@
 .pp-flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.pp-space-evenly {
+  justify-content: space-evenly;
+}
+
+.pp-wrap {
+  flex-wrap: wrap;
 }

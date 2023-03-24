@@ -3,32 +3,39 @@ import "./Experience.css";
 
 function Work(props) {
   function ToolsList(tools) {
-    const ToolsItems = tools.map((i) => <li key={i}>{i}</li>);
+    const ToolsItems = tools.map((i) => (
+      <div className="work-skill pp-color-animation pp-text-small" key={i}>
+        {i}
+      </div>
+    ));
     return (
-      <ul className="text-red pp-text-normal" id="menu">
+      <div
+        className="pp-flex-row pp-wrap pp-gap-x-small pp-text-red pp-text-normal"
+        id="menu"
+      >
         {ToolsItems}
-      </ul>
+      </div>
     );
   }
 
   return (
-    <div className="work pp-text-xx-large">
-      <div className="inside-0">
-        <p>
-          <strong>{props.title}</strong>
-        </p>
-        <p className="pp-text-large">{props.info}</p>
-        <div className="my-link">
-          <a href={props.link} target="_blank" rel="noreferrer">
-            Code
+    <div className="work pp-box-shadow-gray">
+      <div className="pp-flex-column">
+        <div className="pp-text-x-small pp-text-align-end">{props.period}</div>
+        <div className="pp-text-align-start pp-margin-bottom-small">
+          <span className="pp-text-bold pp-text-large">{props.title} </span>
+
+          <span className="pp-text-small">at</span>
+          <a
+            href={props.link}
+            className="company-link pp-text-small"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {props.company}
           </a>
         </div>
-      </div>
-      <div className="inside-1">
-        <p>
-          <strong>Tools & Frameworks</strong>{" "}
-        </p>
-        {ToolsList(props.tools)}
+        <div className="pp-width-100">{ToolsList(props.tools)}</div>
       </div>
     </div>
   );

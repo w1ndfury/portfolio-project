@@ -1,0 +1,28 @@
+.pp-color-animation {
+  animation: pulse 5s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #584747;
+  }
+  15% {
+    background-color: #4b4242;
+  }
+  30% {
+    background-color: #332b2b;
+  }
+  45% {
+    background-color: #211a1a;
+  }
+  60% {
+    background-color: #332b2b;
+  }
+  75% {
+    background-color: #4b4242;
+  }
+  100% {
+    background-color: #593939;
+  }
+}

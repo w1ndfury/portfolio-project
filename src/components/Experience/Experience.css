@@ -5,10 +5,9 @@
 }
 
 .work {
-  padding: 16px;
+  padding: 8px 16px 16px;
   border: 1px solid white;
-  height: 100%;
-  width: 400px;
+  background-color: var(--black-50);
 }
 
 ul#menu li {
@@ -17,10 +16,6 @@ ul#menu li {
 
 @media (max-width: 768px) {
   .work {
-    padding-top: 10px;
-    border: none;
-    background-color: var(--black);
-    height: auto;
     overflow-y: auto;
   }
   .experience-text {
@@ -34,52 +29,22 @@ ul#menu li {
   }
 }
 
-.my-link {
-  z-index: 1;
+.company-link {
   cursor: pointer;
-  padding-bottom: 0px;
-}
-
-.my-link a {
   text-decoration: none;
-  background-color: var(--black);
-  color: lightgray;
-  border-radius: 100px;
-  padding: 10px;
+  color: var(--white);
+  border-radius: 16px;
+  padding: 2px 8px;
 }
 
-.my-link a:hover {
-  background-color: lightgray;
-  color: var(--black);
+.company-link:hover {
+  color: var(--very-light-gray);
+  opacity: 0.6;
   text-decoration: none;
 }
 
-button.rec-dot {
-  background-color: rgb(36, 36, 36);
-  box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-button.rec-dot:hover,
-button.rec-dot:active,
-button.rec-dot:focus {
-  box-shadow: 0 0 1px 3px rgba(255, 255, 255, 0.5);
-}
-
-/* square buttons */
-.rec.rec-arrow {
-  border-radius: 0;
-}
-/* round buttons on hover */
-.rec.rec-arrow:hover {
-  border-radius: 50%;
-  background-color: grey;
-  color: grey;
-}
-/* hide disabled buttons */
-.rec.rec-arrow:disabled {
-  visibility: 0.2;
-}
-
-.rec.rec-arrow:enabled:hover {
-  background-color: grey;
+.work-skill {
+  padding: 0 8px;
+  border-radius: 16px;
+  background-color: var(--very-dark-grayish-red);
 }

@@ -4,5 +4,6 @@ html {
 
 .my-app {
   background-color: var(--black);
+  color: white;
   font-family: Courier New;
 }

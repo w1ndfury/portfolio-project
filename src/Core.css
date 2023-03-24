@@ -2,16 +2,24 @@
   margin-left: 8px;
 }
 
-.pp-margin-bottom-x-small {
-  margin-bottom: 4px;
-}
-
 .pp-margin-bottom-0 {
   margin-bottom: 0;
 }
 
+.pp-margin-bottom-x-small {
+  margin-bottom: 4px;
+}
+
+.pp-margin-bottom-small {
+  margin-bottom: 8px;
+}
+
 .pp-margin-top-56 {
   margin-top: 56px;
+}
+
+.pp-text-x-small {
+  font-size: 12px;
 }
 
 .pp-text-small {
@@ -46,8 +54,24 @@
   width: 100%;
 }
 
-.text-red {
+.pp-text-red {
   color: var(--red);
+}
+
+.pp-text-white {
+  color: var(--white);
+}
+
+.pp-text-bold {
+  font-weight: bold;
+}
+
+.pp-text-align-end {
+  text-align: end;
+}
+
+.pp-text-align-start {
+  text-align: start;
 }
 
 .pp-input-black {
@@ -75,4 +99,12 @@ select:focus {
 
 .pp-box-shadow-gray:hover {
   box-shadow: rgb(255, 255, 255) 0px 1px 15px;
+}
+
+.pp-gap-x-small {
+  gap: 8px;
+}
+
+.pp-gap-small {
+  gap: 16px;
 }

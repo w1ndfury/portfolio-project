@@ -1,53 +1,43 @@
 import React from "react";
 import "./Experience.css";
 import Work from "./Work";
-import Carousel from "react-elastic-carousel";
 
 function Experience() {
-  const breakPoints = [
-    { width: 1, itemToShow: 1 },
-    { width: 500, itemToShow: 2 },
-    { width: 768, itemToShow: 2 },
-    { width: 1200, itemToShow: 2 },
-  ];
-
   const workItems = [
     {
       number: 1,
-      title: "Cooking-Steam-App",
+      title: "Front end Engineer",
+      company: "Desquared S.A.",
+      period: "July 2022 - Present",
       info: "test",
-      link: "https://github.com/w1ndfury/Cooking-Steam-App",
-      tools: ["React.js", "React-Flow-Renderer", "Material-UI", "Html", "CSS"],
+      link: "https://thinkdesquared.com/",
+      tools: ["AngularJS", "Typescript", "CSS", "HTML", "Storybook"],
     },
     {
       number: 2,
-      title: "Chilimon-App",
+      title: "Full stack developer",
+      company: "TESAE group",
+      period: "March 2021 - May 2022",
       info: "test 2",
-      link: "https://github.com/w1ndfury/Chilimon-App",
-      tools: ["MongoDB", "Express", "React.js", "Node.js"],
+      link: "https://www.tesae.gr/",
+      tools: ["CSS", "HTML", "Javascript", "PHP", "MySQL"],
     },
   ];
 
   return (
-    <div className="pp-section-wraper-body pp-box-shadow-gray">
-      <div className="experience-text pp-text-xx-large">
-        <div className="container-fluid px-0 col-12">
-          <div className="row no-gutters">
-            <Carousel breakPoints={breakPoints}>
-              {workItems?.map((item) => (
-                <Work
-                  key={item.number}
-                  number={item.number}
-                  title={item.title}
-                  info={item.info}
-                  link={item.link}
-                  tools={item.tools}
-                />
-              ))}
-            </Carousel>
-          </div>
-        </div>
-      </div>
+    <div className="pp-flex-column pp-gap-small">
+      {workItems?.map((item) => (
+        <Work
+          key={item.number}
+          number={item.number}
+          company={item.company}
+          period={item.period}
+          title={item.title}
+          info={item.info}
+          link={item.link}
+          tools={item.tools}
+        />
+      ))}
     </div>
   );
 }

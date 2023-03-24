@@ -5,6 +5,7 @@ import "./Variables.css";
 import "./Buttons.css";
 import "./Core.css";
 import "./Containers.css";
+import "./Animations.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import MyParticles from "./components/MyParticles/MyParticles";
