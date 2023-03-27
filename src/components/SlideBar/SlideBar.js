@@ -23,7 +23,7 @@ function SlideBar() {
   return (
     <Navbar dark className="pp-navbar pp-box-shadow-purple" expand="sm">
       <Container>
-        <NavbarBrand href="/" className="mr-auto">
+        <NavbarBrand href="/portfolio-project" className="mr-auto">
           {
             <Typed
               className="typed-text"
