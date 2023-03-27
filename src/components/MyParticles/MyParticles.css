@@ -1,10 +1,5 @@
 /*.......................... PARTICLES JS ..........................*/
 
-.tsparticles-canvas-el {
+#tsparticles {
   background-color: var(--darkslateblue);
-  position: fixed;
-  height: 100vh !important;
-  width: 100vw !important;
-  max-width: 100%;
-  z-index: 1;
 }

@@ -19,10 +19,9 @@ function Work(props) {
   }
 
   return (
-    <div className="work pp-box-shadow-gray">
+    <div className="work pp-background-gradient-purple-glass pp-box-shadow-gray">
       <div className="pp-flex-column">
-        <div className="pp-text-x-small pp-text-align-end">{props.period}</div>
-        <div className="pp-text-align-start pp-margin-bottom-small">
+        <div className="pp-text-align-start pp-margin-bottom-0">
           <span className="pp-text-bold pp-text-large">{props.title} </span>
 
           <span className="pp-text-small">at</span>
@@ -35,6 +34,9 @@ function Work(props) {
             {props.company}
           </a>
         </div>
+        <p className="pp-text-x-small pp-text-align-start pp-text-gray">
+          {props.period}
+        </p>
         <div className="pp-width-100">{ToolsList(props.tools)}</div>
       </div>
     </div>

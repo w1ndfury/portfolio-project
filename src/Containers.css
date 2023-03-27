@@ -25,9 +25,12 @@
   padding-top: 20%;
 }
 
-.pp-section-experience,
-.pp-section-contact {
+.pp-section-experience {
   min-height: 100vh;
+  height: auto;
+}
+
+.pp-section-contact {
   height: auto;
 }
 

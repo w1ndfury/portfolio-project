@@ -4,13 +4,11 @@ import "./Footer.css";
 function Footer() {
   return (
     <div>
-      <div className="footer-wraper pp-text-xx-large">
+      <div className="footer-wraper pp-box-shadow-purple pp-text-xx-large">
         <div className="footer-text pp-text-small">
           <div className="copyright">
-            <p>
-              Copyright &copy;
-              <script>document.write(new Date().getFullYear())</script>{" "}
-              Panagiotis Patsoglou All Rights Reserved
+            <p className="pp-margin-bottom-0">
+              &copy; {new Date().getFullYear()} Panagiotis Patsoglou
             </p>
           </div>
         </div>

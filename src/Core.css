@@ -2,6 +2,10 @@
   margin-left: 8px;
 }
 
+.pp-margin-right-default {
+  margin-right: 16px;
+}
+
 .pp-margin-bottom-0 {
   margin-bottom: 0;
 }
@@ -12,6 +16,10 @@
 
 .pp-margin-bottom-small {
   margin-bottom: 8px;
+}
+
+.pp-margin-top-default {
+  margin-top: 16px;
 }
 
 .pp-margin-top-56 {
@@ -42,6 +50,10 @@
   font-size: 22px;
 }
 
+.pp-text-large-24 {
+  font-size: 24px;
+}
+
 .pp-text-large-30 {
   font-size: 30px;
 }
@@ -60,6 +72,10 @@
 
 .pp-text-white {
   color: var(--white);
+}
+
+.pp-text-gray {
+  color: var(--light-slate);
 }
 
 .pp-text-bold {
@@ -101,10 +117,27 @@ select:focus {
   box-shadow: rgb(255, 255, 255) 0px 1px 15px;
 }
 
+.pp-box-shadow-purple {
+  box-shadow: 0 3px 20px 0 rgba(255, 255, 255, 0.2),
+    0 4px 10px 0 rgba(94, 21, 104, 0.2);
+}
+
 .pp-gap-x-small {
   gap: 8px;
 }
 
 .pp-gap-small {
   gap: 16px;
+}
+
+.pp-icon-white {
+  color: var(--white);
+}
+
+.pp-background-gradient-purple-glass {
+  background: radial-gradient(
+    circle,
+    rgba(103, 58, 191, 0.3) 0%,
+    rgba(153, 148, 233, 0.7) 100%
+  );
 }

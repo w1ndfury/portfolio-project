@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.button {
+  outline-color: transparent;
+}
+
 .my-app {
   background-color: var(--black);
   color: white;

@@ -21,7 +21,7 @@ function SlideBar() {
   };
 
   return (
-    <Navbar dark className="pp-navbar" expand="sm">
+    <Navbar dark className="pp-navbar pp-box-shadow-purple" expand="sm">
       <Container>
         <NavbarBrand href="/" className="mr-auto">
           {

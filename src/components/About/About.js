@@ -5,7 +5,7 @@ function About() {
   return (
     <div className="">
       <div className="about-text">
-        <p className="my-name-text pp-text-large-50 pp-margin-bottom-0">
+        <p className="my-name-text pp-text-large-30 pp-margin-bottom-0">
           PANAGIOTIS PATSOGLOU
         </p>
         <p className="pp-text-xx-large">

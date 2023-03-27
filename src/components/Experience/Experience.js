@@ -20,12 +20,15 @@ function Experience() {
       period: "March 2021 - May 2022",
       info: "test 2",
       link: "https://www.tesae.gr/",
-      tools: ["CSS", "HTML", "Javascript", "PHP", "MySQL"],
+      tools: ["CSS", "HTML", "Javascript", "PHP", "MySQL", "RESTful API"],
     },
   ];
 
   return (
     <div className="pp-flex-column pp-gap-small">
+      <p className="pp-margin-bottom-0 pp-text-align-start pp-text-xx-large">
+        Where I’ve Worked
+      </p>
       {workItems?.map((item) => (
         <Work
           key={item.number}

@@ -1,28 +1,17 @@
 .pp-color-animation {
-  animation: pulse 5s infinite;
-  animation-timing-function: ease-in-out;
+  animation: gradient 5s ease infinite;
+  background-size: 400% 400% !important;
+  background: linear-gradient(-90deg, #4188ca, #72299c);
 }
 
-@keyframes pulse {
+@keyframes gradient {
   0% {
-    background-color: #584747;
+    background-position: 0% 50%;
   }
-  15% {
-    background-color: #4b4242;
-  }
-  30% {
-    background-color: #332b2b;
-  }
-  45% {
-    background-color: #211a1a;
-  }
-  60% {
-    background-color: #332b2b;
-  }
-  75% {
-    background-color: #4b4242;
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    background-color: #593939;
+    background-position: 0% 50%;
   }
 }

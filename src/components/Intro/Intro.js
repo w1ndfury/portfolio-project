@@ -5,6 +5,7 @@ import "./Intro.css";
 import About from "../About/About";
 import Experience from "../Experience/Experience";
 import Contact from "../Contact/Contact";
+import Footer from "../Footer/Footer";
 import SlideBar from "../SlideBar/SlideBar";
 
 const greetingsMessage = "Hi...";
@@ -109,6 +110,9 @@ class Intro extends React.Component {
             </div>
             <div className="pp-section-wraper pp-section-contact" id="contact">
               <Contact />
+            </div>
+            <div>
+              <Footer />
             </div>
           </div>
         )}
