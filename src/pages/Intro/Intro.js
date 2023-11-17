@@ -5,8 +5,8 @@ import "./Intro.css";
 import About from "../About/About";
 import Experience from "../Experience/Experience";
 import Contact from "../Contact/Contact";
-import Footer from "../Footer/Footer";
-import SlideBar from "../SlideBar/SlideBar";
+import Footer from "../../layouts/Footer/Footer";
+import SlideBar from "../../layouts/SlideBar/SlideBar";
 
 const greetingsMessage = "Hi...";
 const firstQuestion = "What's your name?";

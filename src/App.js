@@ -9,7 +9,7 @@ import "./Styles/Animations.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import MyParticles from "./components/MyParticles/MyParticles";
-import Intro from "./components/Intro/Intro";
+import Intro from "./pages/Intro/Intro";
 
 function App() {
   return (
