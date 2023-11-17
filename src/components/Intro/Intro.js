@@ -54,15 +54,14 @@ class Intro extends React.Component {
             {!this.state.showSummaryMessage && (
               <div className="fade-in-2 pp-flex-row-center">
                 <input
-                  style={{ maxWidth: "200px" }}
-                  className="pp-input-black pp-width-100"
+                  className="pp-input-black pp-width-100 pp-max-width-200"
                   type="text"
                   placeholder="Type your name..."
                   onChange={(e) => this.setState({ userName: e.target.value })}
                 />
                 {this.state.userName != null && (
                   <button
-                    className="btn-transparent-gray pp-margin-left-small"
+                    className="btn-contact-link pp-margin-left-small"
                     onClick={this.onGiveNameClickHandler}
                   >
                     submit
