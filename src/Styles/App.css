@@ -6,6 +6,10 @@ html {
   outline-color: transparent;
 }
 
+a:hover {
+  text-decoration: none !important;
+}
+
 .my-app {
   background-color: var(--black);
   color: white;

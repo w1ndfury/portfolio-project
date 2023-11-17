@@ -28,20 +28,6 @@ ul#menu li {
   }
 }
 
-.company-link {
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--white);
-  border-radius: 16px;
-  padding: 2px 8px;
-}
-
-.company-link:hover {
-  color: var(--very-light-gray);
-  opacity: 0.6;
-  text-decoration: none;
-}
-
 .work-skill {
   padding: 0 8px;
   border-radius: 16px;

@@ -7,6 +7,7 @@ import Experience from "../Experience/Experience";
 import Contact from "../Contact/Contact";
 import Footer from "../../layouts/Footer/Footer";
 import SlideBar from "../../layouts/SlideBar/SlideBar";
+import PrimaryButton from "../../components/Buttons/PrimaryButton/PrimaryButton";
 
 const greetingsMessage = "Hi...";
 const firstQuestion = "What's your name?";
@@ -60,12 +61,11 @@ class Intro extends React.Component {
                   onChange={(e) => this.setState({ userName: e.target.value })}
                 />
                 {this.state.userName != null && (
-                  <button
-                    className="btn-contact-link pp-margin-left-small"
+                  <PrimaryButton
+                    label="submit"
+                    classNames="pp-margin-left-small"
                     onClick={this.onGiveNameClickHandler}
-                  >
-                    submit
-                  </button>
+                  ></PrimaryButton>
                 )}
               </div>
             )}
