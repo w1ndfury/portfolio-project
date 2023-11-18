@@ -8,7 +8,7 @@ import "./Styles/Containers.css";
 import "./Styles/Animations.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import MyParticles from "./components/MyParticles/MyParticles";
+import MyParticles from "./features/MyParticles/MyParticles";
 import Intro from "./pages/Intro/Intro";
 
 function App() {
