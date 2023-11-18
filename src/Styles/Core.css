@@ -66,6 +66,10 @@
   width: 100%;
 }
 
+.pp-max-width-200 {
+  max-width: 200px;
+}
+
 .pp-text-red {
   color: var(--red);
 }

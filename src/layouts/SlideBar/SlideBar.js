@@ -39,13 +39,13 @@ function SlideBar() {
 
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavLink className="btn btn-about" href="#about">
+            <NavLink className="pp-nav-button" href="#about">
               Summary
             </NavLink>
-            <NavLink className="btn btn-experience" href="#experience">
+            <NavLink className="pp-nav-button" href="#experience">
               Experience
             </NavLink>
-            <NavLink className="btn btn-contact" href="#contact">
+            <NavLink className="pp-nav-button" href="#contact">
               Contact
             </NavLink>
           </Nav>

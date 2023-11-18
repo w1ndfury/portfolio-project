@@ -5,8 +5,9 @@ import "./Intro.css";
 import About from "../About/About";
 import Experience from "../Experience/Experience";
 import Contact from "../Contact/Contact";
-import Footer from "../Footer/Footer";
-import SlideBar from "../SlideBar/SlideBar";
+import Footer from "../../layouts/Footer/Footer";
+import SlideBar from "../../layouts/SlideBar/SlideBar";
+import PrimaryButton from "../../components/Buttons/PrimaryButton/PrimaryButton";
 
 const greetingsMessage = "Hi...";
 const firstQuestion = "What's your name?";
@@ -54,19 +55,17 @@ class Intro extends React.Component {
             {!this.state.showSummaryMessage && (
               <div className="fade-in-2 pp-flex-row-center">
                 <input
-                  style={{ maxWidth: "200px" }}
-                  className="pp-input-black pp-width-100"
+                  className="pp-input-black pp-width-100 pp-max-width-200"
                   type="text"
                   placeholder="Type your name..."
                   onChange={(e) => this.setState({ userName: e.target.value })}
                 />
                 {this.state.userName != null && (
-                  <button
-                    className="btn-transparent-gray pp-margin-left-small"
+                  <PrimaryButton
+                    label="submit"
+                    classNames="pp-margin-left-small"
                     onClick={this.onGiveNameClickHandler}
-                  >
-                    submit
-                  </button>
+                  ></PrimaryButton>
                 )}
               </div>
             )}

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Experience.css";
+import { SecondaryLinkButton } from "../../components/Buttons/LinkButtons/LinkButtons";
 
 function Work(props) {
   function ToolsList(tools) {
@@ -24,15 +25,12 @@ function Work(props) {
         <div className="pp-text-align-start pp-margin-bottom-0">
           <span className="pp-text-bold pp-text-large">{props.title} </span>
 
-          <span className="pp-text-small">at</span>
-          <a
+          <span className="pp-text-small">at </span>
+          <SecondaryLinkButton
+            label={props.company}
+            classNames="pp-text-small"
             href={props.link}
-            className="company-link pp-text-small"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {props.company}
-          </a>
+          ></SecondaryLinkButton>
         </div>
         <p className="pp-text-x-small pp-text-align-start pp-text-gray">
           {props.period}
