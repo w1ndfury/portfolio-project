@@ -25,7 +25,7 @@ function Experience() {
     },
   ];
 
-  const sectionTitle = "My experience";
+  const sectionTitle = "Where I've worked";
 
   return (
     <div className="experience-text pp-width-100 pp-flex-column pp-gap-small">
