@@ -1,17 +1,29 @@
 .intro-wraper {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
   text-align: center;
-  padding: 20%;
   height: 100vh;
 }
 
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  top: var(--navbar-height);
+  position: relative;
+}
+
 .ai-question {
-  color: var(--very-light-gray);
+  color: var(--white);
 }
 
 .ai-answer {
-  color: var(--very-light-gray);
+  color: var(--white);
 }
 
 .fade-in-2 {
@@ -22,27 +34,6 @@
 
 .fade-out-ai-answer {
   animation: 3s fadeOut;
-}
-
-@keyframes fadeIn {
-  99% {
-    visibility: hidden;
-  }
-
-  100% {
-    visibility: visible;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    opacity: 0;
-    transform: translate3d(0, -200%, 0);
-  }
 }
 
 @media (max-height: 617px) {

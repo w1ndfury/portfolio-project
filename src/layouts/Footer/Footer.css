@@ -2,7 +2,7 @@
   z-index: 1;
   position: relative;
   color: white;
-  background-color: var(--black-50);
+  background-color: var(--black);
 }
 
 .footer-text {

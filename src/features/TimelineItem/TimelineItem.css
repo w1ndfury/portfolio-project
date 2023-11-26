@@ -1,0 +1,119 @@
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timeline-container-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.timeline-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-item-active,
+.timeline-item-inactive {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.timeline-item-active {
+  border: 3px solid var(--success-1);
+}
+
+.timeline-item-inactive {
+  border: 3px solid var(--inactive);
+}
+
+.timeline-item-active::after,
+.timeline-item-inactive::after {
+  position: absolute;
+  content: "";
+  top: 29px;
+  height: 103px;
+  left: 12px;
+}
+
+.timeline-item-active::after {
+  z-index: 1;
+  border-left: 2px solid;
+  border-image: linear-gradient(to top, var(--inactive), var(--success-1));
+  border-image-slice: 1;
+}
+.timeline-item-inactive::after {
+  border-left: 2px solid var(--inactive);
+}
+
+.timeline-container
+  .timeline-container-row:last-child
+  .timeline-item-container
+  .timeline-item-active::after,
+.timeline-container
+  .timeline-container-row:last-child
+  .timeline-item-container
+  .timeline-item-inactive::after {
+  height: unset;
+}
+
+.timeline-container
+  .timeline-container-row
+  .timeline-item-container
+  .timeline-item-active::before,
+.timeline-container
+  .timeline-container-row
+  .timeline-item-container
+  .timeline-item-inactive::before {
+  position: absolute;
+  content: "";
+  top: -103px;
+  border-left: 2px solid var(--inactive);
+  color: var(--inactive);
+  height: 100px;
+  left: 12px;
+}
+
+.timeline-container
+  .timeline-container-row:first-child
+  .timeline-item-container
+  .timeline-item-active::before,
+.timeline-container
+  .timeline-container-row:first-child
+  .timeline-item-container
+  .timeline-item-inactive::before {
+  height: unset;
+}
+
+.timeline-container
+  .timeline-container-row
+  .timeline-item-container
+  .timeline-item-active
+  .timeline-status-active {
+  position: relative;
+  left: 3px;
+  top: 3px;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background-color: var(--success-1);
+  animation: pulse-dot 0.75s linear infinite;
+}
+
+.timeline-container
+  .timeline-container-row
+  .timeline-item-container
+  .timeline-item-inactive
+  .timeline-status-inactive {
+  position: relative;
+  left: 3px;
+  top: 3px;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background-color: var(--inactive);
+}

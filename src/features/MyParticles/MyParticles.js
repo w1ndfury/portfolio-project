@@ -1,7 +1,6 @@
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-import "./MyParticles.css";
 
 function MyParticles() {
   const particlesInit = useCallback(async (engine) => {
@@ -11,19 +10,23 @@ function MyParticles() {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
-  }, []);
+  // const particlesLoaded = useCallback(async (container) => {
+  //   await console.log(container);
+  // }, []);
+
+  const customOptions = {
+    backgroundColor: "#31267B",
+  };
 
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
-      loaded={particlesLoaded}
+      // loaded={particlesLoaded}
       options={{
         background: {
           color: {
-            value: "#483d8b",
+            value: customOptions.backgroundColor,
           },
         },
         fpsLimit: 120,

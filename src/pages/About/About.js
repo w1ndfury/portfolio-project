@@ -8,14 +8,12 @@ function About() {
   solid and scalable front-end products with great user experience.`;
 
   return (
-    <div className="">
-      <div className="about-text">
-        <p className="my-name-text pp-text-large-30 pp-margin-bottom-0">
-          {title}
-        </p>
-        <p className="pp-text-xx-large">{subtitle}</p>
-        <p className="pp-text-small">{description}</p>
-      </div>
+    <div className="about-text">
+      <p className="my-name-text pp-text-large-30 pp-margin-bottom-0">
+        {title}
+      </p>
+      <p className="pp-text-xx-large">{subtitle}</p>
+      <p className="pp-text-normal">{description}</p>
     </div>
   );
 }

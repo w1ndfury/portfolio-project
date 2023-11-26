@@ -1,15 +1,15 @@
 .btn-transparent-gray {
   background-color: transparent;
-  color: var(--very-light-gray);
-  border: 1px solid var(--very-light-gray);
+  color: var(--gray-1);
+  border: 1px solid var(--gray-1);
   cursor: pointer;
 }
 
 .btn-transparent-gray:hover,
 .btn-transparent-gray:focus {
-  background-color: var(--very-light-gray);
+  background-color: var(--gray-1);
   color: var(--black);
-  border: 1px solid var(--very-light-gray);
+  border: 1px solid var(--gray-1);
   box-shadow: rgba(218, 218, 218, 0.35) 0px 1px 15px;
 }
 
@@ -31,9 +31,9 @@
 .pp-primary-button:focus,
 .pp-primary-link-button:hover,
 .pp-primary-link-button:focus {
-  background-color: var(--very-light-gray);
+  background-color: var(--white);
   color: var(--black);
-  border: 1px solid var(--very-light-gray);
+  border: 1px solid var(--white);
   box-shadow: rgba(218, 218, 218, 0.35) 0px 1px 15px;
 }
 
@@ -55,14 +55,14 @@
 .pp-secondary-link-button {
   cursor: pointer;
   text-decoration: none;
-  color: var(--white);
+  color: var(--gold);
   border-radius: 16px;
   padding: 2px 8px;
   outline-color: transparent;
 }
 
 .pp-secondary-link-button:hover {
-  color: var(--very-light-gray);
+  color: var(--gray-1);
   opacity: 0.6;
   text-decoration: none;
 }

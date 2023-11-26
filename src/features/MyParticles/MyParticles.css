@@ -1,5 +1,5 @@
 /*.......................... PARTICLES JS ..........................*/
 
-#tsparticles {
-  background-color: var(--darkslateblue);
+.tsparticles {
+  background-color: var(--particles);
 }
