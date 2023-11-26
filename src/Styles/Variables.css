@@ -1,10 +1,13 @@
 :root {
-  --very-light-gray: #e3e3e3;
-  --light-slate: #a8b2d1;
+  --gray-1: #e6e6e6;
+  --inactive: #e6e6e6;
   --black: black;
   --black-50: rgba(0, 0, 0, 0.5);
   --white: white;
   --red: red;
-  --darkslateblue: #483d8b;
+  --particles: #31267b;
   --very-dark-grayish-red: #3c2b2b;
+  --navbar-height: 64px;
+  --success-1: #47ff72;
+  --gold: #fff767;
 }

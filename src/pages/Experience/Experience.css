@@ -9,6 +9,13 @@
   border-radius: 16px;
 }
 
+.work-active {
+  border: 2px solid var(--success-1);
+}
+.work-inactive {
+  border: 1px solid var(--inactive);
+}
+
 ul#menu li {
   display: flex;
 }
@@ -32,5 +39,5 @@ ul#menu li {
   padding: 0 8px;
   border-radius: 16px;
   background-color: var(--very-dark-grayish-red);
-  color: var(--light-slate);
+  color: var(--white);
 }

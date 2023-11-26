@@ -20,11 +20,15 @@ function Work(props) {
   }
 
   return (
-    <div className="work pp-background-gradient-purple-glass pp-box-shadow-gray">
+    <div
+      className={
+        "work pp-background-galaxy-1 pp-box-shadow-gray pp-flex-grow-1 " +
+        (props.active ? "work-active" : "work-inactive")
+      }
+    >
       <div className="pp-flex-column">
         <div className="pp-text-align-start pp-margin-bottom-0">
           <span className="pp-text-bold pp-text-large">{props.title} </span>
-
           <span className="pp-text-small">at </span>
           <SecondaryLinkButton
             label={props.company}
@@ -32,7 +36,7 @@ function Work(props) {
             href={props.link}
           ></SecondaryLinkButton>
         </div>
-        <p className="pp-text-x-small pp-text-align-start pp-text-gray">
+        <p className="pp-text-small pp-text-gray pp-text-align-start pp-text-light">
           {props.period}
         </p>
         <div className="pp-width-100">{ToolsList(props.tools)}</div>

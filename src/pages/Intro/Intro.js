@@ -9,8 +9,15 @@ import Footer from "../../layouts/Footer/Footer";
 import SlideBar from "../../layouts/SlideBar/SlideBar";
 import PrimaryButton from "../../components/Buttons/PrimaryButton/PrimaryButton";
 
-const greetingsMessage = "Hi...";
-const firstQuestion = "What's your name?";
+const strings = {
+  greetingsMessage: "Hi...",
+  firstQuestion: "What's your name?",
+  greetingsMessage2: "Hello ",
+  firstAnswer:
+    ", my name is Panagiotis Patsoglou.</br>I am a Software Engineer!</br> Welcome to my Portfolio Website!",
+};
+
+const typingOptions = { typeSpeed: 10, backSpeed: 10 };
 
 class Intro extends React.Component {
   constructor(props) {
@@ -38,16 +45,16 @@ class Intro extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="intro-wraper">
         {!this.state.showUI && (
-          <div className="pp-flex-column intro-wraper" id="home">
+          <div className="pp-flex-column" id="home">
             {!this.state.showSummaryMessage && (
               <div className="ai-question pp-margin-bottom-x-small pp-text-large-30">
                 <Typed
                   className="typed-text"
-                  strings={[greetingsMessage, firstQuestion]}
-                  typeSpeed={25}
-                  backSpeed={20}
+                  strings={[strings.greetingsMessage, strings.firstQuestion]}
+                  typeSpeed={typingOptions.typeSpeed}
+                  backSpeed={typingOptions.backSpeed}
                   fadeOut={true}
                 />
               </div>
@@ -55,8 +62,10 @@ class Intro extends React.Component {
             {!this.state.showSummaryMessage && (
               <div className="fade-in-2 pp-flex-row-center">
                 <input
-                  className="pp-input-black pp-width-100 pp-max-width-200"
                   type="text"
+                  tabIndex={0}
+                  aria-label="Type your name"
+                  className="pp-input-black pp-width-100 pp-max-width-200"
                   placeholder="Type your name..."
                   onChange={(e) => this.setState({ userName: e.target.value })}
                 />
@@ -82,12 +91,14 @@ class Intro extends React.Component {
                       onComplete={this.onCompleteGreetingsMessage}
                       className="typed-text"
                       strings={[
-                        "Hello <strong>" +
+                        strings.greetingsMessage2 +
+                          "<strong>" +
                           this.state.userName +
-                          "</strong>, my name is Panagiotis Patsoglou.</br>I am a Software Engineer!</br> Welcome to my Portfolio Website!",
+                          "</strong>" +
+                          strings.firstAnswer,
                       ]}
-                      typeSpeed={25}
-                      backSpeed={20}
+                      typeSpeed={typingOptions.typeSpeed}
+                      backSpeed={typingOptions.backSpeed}
                     />
                   )}
               </div>
@@ -97,7 +108,7 @@ class Intro extends React.Component {
 
         {this.state.showUI && <SlideBar />}
         {this.state.showUI && (
-          <div className="pp-flex-column">
+          <div className="main-container">
             <div className="pp-section-wraper pp-section-about" id="about">
               <About />
             </div>
@@ -110,9 +121,7 @@ class Intro extends React.Component {
             <div className="pp-section-wraper pp-section-contact" id="contact">
               <Contact />
             </div>
-            <div>
-              <Footer />
-            </div>
+            <Footer />
           </div>
         )}
       </div>

@@ -79,7 +79,7 @@
 }
 
 .pp-text-gray {
-  color: var(--light-slate);
+  color: var(--gray-1);
 }
 
 .pp-text-bold {
@@ -97,12 +97,12 @@
 .pp-input-black {
   padding: 0 0.5rem;
   background-color: rgba(0, 0, 0, 0.5);
-  color: var(--very-light-gray);
-  border: 1px solid var(--very-light-gray);
+  color: var(--white);
+  border: 1px solid var(--white);
 }
 
 .pp-input-black:hover {
-  border: 1px solid var(--very-light-gray);
+  border: 1px solid var(--white);
 }
 
 .pp-input-black:focus,
@@ -110,7 +110,7 @@ textarea:focus,
 select:focus {
   outline-offset: 1px;
   outline: none;
-  outline-color: var(--very-light-gray);
+  outline-color: var(--gray-1);
 }
 
 .pp-box-shadow-gray {
@@ -143,5 +143,13 @@ select:focus {
     circle,
     rgba(103, 58, 191, 0.3) 0%,
     rgba(153, 148, 233, 0.7) 100%
+  );
+}
+
+.pp-background-galaxy-1 {
+  background: radial-gradient(
+    circle,
+    rgb(126 74 188 / 40%) 0,
+    rgb(43 38 115) 100%
   );
 }
