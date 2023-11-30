@@ -2,11 +2,7 @@ import React from "react";
 import Typed from "react-typed";
 
 import "./Intro.css";
-import About from "../About/About";
-import Experience from "../Experience/Experience";
-import Contact from "../Contact/Contact";
-import Footer from "../../layouts/Footer/Footer";
-import SlideBar from "../../layouts/SlideBar/SlideBar";
+import LandingPage from "../Landing/Landing";
 import PrimaryButton from "../../components/Buttons/PrimaryButton/PrimaryButton";
 
 const strings = {
@@ -45,7 +41,7 @@ class Intro extends React.Component {
 
   render() {
     return (
-      <div className="intro-wraper">
+      <section className="intro-wraper">
         {!this.state.showUI && (
           <div className="pp-flex-column" id="home">
             {!this.state.showSummaryMessage && (
@@ -106,25 +102,8 @@ class Intro extends React.Component {
           </div>
         )}
 
-        {this.state.showUI && <SlideBar />}
-        {this.state.showUI && (
-          <div className="main-container">
-            <div className="pp-section-wraper pp-section-about" id="about">
-              <About />
-            </div>
-            <div
-              className="pp-section-wraper pp-section-experience"
-              id="experience"
-            >
-              <Experience />
-            </div>
-            <div className="pp-section-wraper pp-section-contact" id="contact">
-              <Contact />
-            </div>
-            <Footer />
-          </div>
-        )}
-      </div>
+        {this.state.showUI && <LandingPage />}
+      </section>
     );
   }
 }
