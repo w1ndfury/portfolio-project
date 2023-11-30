@@ -97,7 +97,6 @@ function Piano() {
           ...prevState,
           active1: false,
         }));
-        console.log(state);
         break;
       case "w":
         break;
@@ -136,7 +135,6 @@ function Piano() {
           ...prevState,
           active1: true,
         }));
-        console.log(state);
         break;
       case "w":
         playNote(c_sharp_5);
