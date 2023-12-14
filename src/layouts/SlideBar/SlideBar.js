@@ -39,6 +39,9 @@ function SlideBar() {
 
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
+            <NavLink className="pp-nav-button" href="/piano">
+              Play Piano
+            </NavLink>
             <NavLink className="pp-nav-button" href="#about">
               Summary
             </NavLink>
