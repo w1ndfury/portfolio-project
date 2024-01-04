@@ -94,6 +94,10 @@
   text-align: start;
 }
 
+.pp-text-align-center {
+  text-align: center;
+}
+
 .pp-input-black {
   padding: 0 0.5rem;
   background-color: rgba(0, 0, 0, 0.5);

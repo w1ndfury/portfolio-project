@@ -9,12 +9,11 @@ import "./Styles/Core.css";
 import "./Styles/Containers.css";
 import "./Styles/Animations.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import MyParticles from "./features/MyParticles/MyParticles";
+// import MyParticles from "./features/MyParticles/MyParticles";
 
 export function Shell() {
   return (
     <div className="my-app">
-      <MyParticles />
       <RouterProvider router={router} />
     </div>
   );

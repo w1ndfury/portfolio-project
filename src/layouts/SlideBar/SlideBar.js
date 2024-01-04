@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SlideBar.css";
+import { useNavigate } from "react-router-dom";
 
 import {
   Collapse,
@@ -12,13 +13,18 @@ import {
 } from "reactstrap";
 
 import Typed from "react-typed";
+import PrimaryButton from "../../components/Buttons/PrimaryButton/PrimaryButton";
 
 function SlideBar() {
   const [isOpen, setisOpen] = useState(false);
-
+  const navigate = useNavigate();
   const toggle = () => {
     setisOpen(!isOpen);
   };
+
+  function onPlaygroundClick() {
+    navigate("/playground");
+  }
 
   return (
     <Navbar dark className="pp-navbar pp-box-shadow-purple" expand="sm">
@@ -39,9 +45,10 @@ function SlideBar() {
 
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavLink className="pp-nav-button" href="/piano">
-              Play Piano
-            </NavLink>
+            <PrimaryButton
+              label="Playground"
+              onClick={onPlaygroundClick}
+            ></PrimaryButton>
             <NavLink className="pp-nav-button" href="#about">
               Summary
             </NavLink>

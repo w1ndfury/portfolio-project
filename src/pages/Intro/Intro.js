@@ -24,7 +24,7 @@ function Intro() {
 
   useEffect(() => {
     if (storedUserName) navigate("/home");
-  }, []);
+  }, [storedUserName, navigate]);
 
   function onCompleteGreetingsMessage() {
     setSummaryAnimation(true);

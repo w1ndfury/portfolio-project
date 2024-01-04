@@ -101,16 +101,16 @@ function Piano() {
     }
   };
 
-  function navigateToHomePage() {
-    navigate("/home");
+  function navigateToPlayground() {
+    navigate("/playground");
   }
 
   return (
     <section className="piano-page">
       <PrimaryButton
         classNames="piano-back-button"
-        label="Home page"
-        onClick={navigateToHomePage}
+        label="Back to Playground"
+        onClick={navigateToPlayground}
       ></PrimaryButton>
       <section className="piano-container">
         <div className="speaker-container">My Flexbox Layout Piano</div>
