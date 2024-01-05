@@ -3,10 +3,10 @@ import { Squares } from "../services/SquaresObject";
 
 export const GameStatus = (props) => {
   function onPlayAgain() {
+    props.setSquares(Squares);
     props.setGameStatus("");
     props.setPlayerTurn(1);
     props.setPlays(0);
-    props.setSquares(Squares);
   }
 
   return (

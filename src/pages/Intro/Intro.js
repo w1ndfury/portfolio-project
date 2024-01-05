@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Typed from "react-typed";
 import "./Intro.css";
 import PrimaryButton from "../../components/Buttons/PrimaryButton/PrimaryButton";
@@ -22,10 +22,6 @@ function Intro() {
   const navigate = useNavigate();
   const storedUserName = localStorage.getItem("userName");
 
-  useEffect(() => {
-    if (storedUserName) navigate("/home");
-  }, [storedUserName, navigate]);
-
   function onCompleteGreetingsMessage() {
     setSummaryAnimation(true);
     setTimeout(() => {
@@ -45,7 +41,7 @@ function Intro() {
           <section>
             <div className="ai-question pp-margin-bottom-x-small pp-text-large-30">
               <Typed
-                className="typed-text"
+                className="pp-text-gray"
                 strings={[strings.greetingsMessage, strings.firstQuestion]}
                 typeSpeed={typingOptions.typeSpeed}
                 backSpeed={typingOptions.backSpeed}

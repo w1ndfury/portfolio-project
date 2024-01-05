@@ -24,11 +24,11 @@
 }
 
 .timeline-item-active {
-  border: 3px solid var(--success-1);
+  border: 3px solid var(--secondary);
 }
 
 .timeline-item-inactive {
-  border: 3px solid var(--inactive);
+  border: 3px solid var(--gray);
 }
 
 .timeline-item-active::after,
@@ -43,11 +43,11 @@
 .timeline-item-active::after {
   z-index: 1;
   border-left: 2px solid;
-  border-image: linear-gradient(to top, var(--inactive), var(--success-1));
+  border-image: linear-gradient(to top, var(--gray), var(--secondary));
   border-image-slice: 1;
 }
 .timeline-item-inactive::after {
-  border-left: 2px solid var(--inactive);
+  border-left: 2px solid var(--gray);
 }
 
 .timeline-container
@@ -72,8 +72,8 @@
   position: absolute;
   content: "";
   top: -103px;
-  border-left: 2px solid var(--inactive);
-  color: var(--inactive);
+  border-left: 2px solid var(--gray);
+  color: var(--gray);
   height: 100px;
   left: 12px;
 }
@@ -100,7 +100,7 @@
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
-  background-color: var(--success-1);
+  background-color: var(--secondary);
   animation: pulse-dot 0.75s linear infinite;
 }
 
@@ -115,5 +115,5 @@
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
-  background-color: var(--inactive);
+  background-color: var(--gray);
 }

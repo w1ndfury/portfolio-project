@@ -9,11 +9,11 @@ function About() {
 
   return (
     <div className="about-text">
-      <p className="my-name-text pp-text-large-30 pp-margin-bottom-0">
-        {title}
-      </p>
-      <p className="pp-text-xx-large">{subtitle}</p>
-      <p className="pp-text-normal">{description}</p>
+      <h1 className="pp-text-secondary pp-text-large-80">{title}</h1>
+      <h2 className="pp-text-xx-large subtitle-text pp-text-large-24">
+        {subtitle}
+      </h2>
+      <h3 className="pp-text-large description-text">{description}</h3>
     </div>
   );
 }

@@ -19,11 +19,11 @@
 }
 
 .ai-question {
-  color: var(--white);
+  color: var(--gray);
 }
 
 .ai-answer {
-  color: var(--white);
+  color: var(--gray);
 }
 
 .fade-in-2 {

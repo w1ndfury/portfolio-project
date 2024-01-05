@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./TicTacToe.css";
 import PrimaryButton from "../../components/Buttons/PrimaryButton/PrimaryButton";
 import { useNavigate } from "react-router-dom";
@@ -7,36 +7,17 @@ import {
   CheckHorizontalWin,
   CheckVerticalWin,
   CheckDiagonallyWin,
+  disableSquares,
 } from "./services/SquaresObject";
 import { GameStatus } from "./components/GameStatus";
 
 function TicTacToe() {
   const [gameStatus, setGameStatus] = useState("");
   const [playerTurn, setPlayerTurn] = useState(1); // 1 or 2
-  const [plays, setPlays] = useState(0); // max 9
   const [squares, setSquares] = useState(Squares);
+  const [plays, setPlays] = useState(0);
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (plays < 5) return;
-    const checkHorizontalWin = CheckHorizontalWin(squares);
-    if (checkHorizontalWin !== "") {
-      setGameStatus(checkHorizontalWin);
-      return;
-    }
-    const checkVerticalWin = CheckVerticalWin(squares);
-    if (checkVerticalWin !== "") {
-      setGameStatus(checkVerticalWin);
-      return;
-    }
-    const checkDiagonallyWin = CheckDiagonallyWin(squares);
-    if (checkDiagonallyWin !== "") {
-      setGameStatus(checkDiagonallyWin);
-      return;
-    }
-    if (plays === 9) setGameStatus("Tie");
-  }, [plays, squares]);
 
   const firstRow = Object.fromEntries(
     Object.entries(squares).filter(([key]) => key <= 2)
@@ -66,7 +47,33 @@ function TicTacToe() {
       setSquares(newArray);
       setPlayerTurn(1);
     }
+
     setPlays((plays) => plays + 1);
+    checkGameStatus(plays + 1, newArray);
+  }
+
+  function checkGameStatus(curPlays, curSquares) {
+    if (curPlays < 5) return;
+    const checkHorizontalWin = CheckHorizontalWin(curSquares);
+    if (checkHorizontalWin !== "") {
+      setGameStatus(checkHorizontalWin);
+      setSquares(disableSquares(curSquares));
+      return;
+    }
+    const checkVerticalWin = CheckVerticalWin(curSquares);
+    if (checkVerticalWin !== "") {
+      setGameStatus(checkVerticalWin);
+      setSquares(disableSquares(curSquares));
+      return;
+    }
+    const checkDiagonallyWin = CheckDiagonallyWin(curSquares);
+    if (checkDiagonallyWin !== "") {
+      setGameStatus(checkDiagonallyWin);
+      setSquares(disableSquares(curSquares));
+      return;
+    }
+    if (curPlays === 9) setGameStatus("Tie");
+    return;
   }
 
   return (
@@ -131,8 +138,8 @@ function TicTacToe() {
         gameStatus={gameStatus}
         setGameStatus={setGameStatus}
         setPlayerTurn={setPlayerTurn}
-        setPlays={setPlays}
         setSquares={setSquares}
+        setPlays={setPlays}
       />
     </section>
   );

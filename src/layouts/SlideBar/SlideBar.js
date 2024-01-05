@@ -18,6 +18,7 @@ import PrimaryButton from "../../components/Buttons/PrimaryButton/PrimaryButton"
 function SlideBar() {
   const [isOpen, setisOpen] = useState(false);
   const navigate = useNavigate();
+
   const toggle = () => {
     setisOpen(!isOpen);
   };
@@ -26,10 +27,14 @@ function SlideBar() {
     navigate("/playground");
   }
 
+  function onNavbarBrandClick() {
+    localStorage.setItem("userName", "");
+  }
+
   return (
-    <Navbar dark className="pp-navbar pp-box-shadow-purple" expand="sm">
+    <Navbar dark className="pp-navbar pp-box-shadow-primary" expand="sm">
       <Container>
-        <NavbarBrand href="/" className="mr-auto">
+        <NavbarBrand href="/" onClick={onNavbarBrandClick}>
           {
             <Typed
               className="typed-text"
@@ -42,10 +47,10 @@ function SlideBar() {
           }
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
-
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <PrimaryButton
+              classNames="playground-button"
               label="Playground"
               onClick={onPlaygroundClick}
             ></PrimaryButton>

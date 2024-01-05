@@ -17,6 +17,7 @@
   justify-content: center;
   z-index: 1;
   width: 100%;
+  box-shadow: 0 0px 50px 0 rgba(102, 252, 241, 0.3);
 }
 
 .tic-tac-toe-container.tic-tac-toe-row > button {
@@ -83,6 +84,8 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .player-1-container,

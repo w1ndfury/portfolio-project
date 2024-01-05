@@ -16,9 +16,35 @@
   background-color: var(--black);
 }
 
+.navbar-dark .navbar-toggler {
+  color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+
+.playground-button {
+  margin-right: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    display: none !important;
+  }
+}
+
 @media (max-width: 576px) {
+  .playground-button {
+    margin-right: 0;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
   .pp-navbar {
     background-color: var(--black);
     height: unset;
+  }
+
+  .navbar-nav {
+    align-items: center;
   }
 }

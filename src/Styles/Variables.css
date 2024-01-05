@@ -1,6 +1,5 @@
 :root {
   --gray-1: #e6e6e6;
-  --inactive: #e6e6e6;
   --black: black;
   --black-50: rgba(0, 0, 0, 0.5);
   --white: white;
@@ -8,6 +7,11 @@
   --particles: #31267b;
   --very-dark-grayish-red: #3c2b2b;
   --navbar-height: 64px;
-  --success-1: #47ff72;
   --gold: #fff767;
+
+  --primary: #0b0c10 !important;
+  --secondary: #66fcf1 !important;
+  --secondary-2: #45a29e !important;
+  --dark-gray: #1f2833 !important;
+  --gray: #c5c6c7 !important;
 }

@@ -154,3 +154,10 @@ export const CheckDiagonallyWin = (squares) => {
   }
   return "";
 };
+
+export const disableSquares = (squares) => {
+  const disabledSquares = squares.map((square) => {
+    return { ...square, disabled: true };
+  });
+  return disabledSquares;
+};
