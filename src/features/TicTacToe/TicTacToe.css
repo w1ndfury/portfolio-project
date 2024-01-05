@@ -1,0 +1,120 @@
+.tic-tac-toe-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 492px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.tic-tac-toe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+  box-shadow: 0 0px 50px 0 rgba(102, 252, 241, 0.3);
+}
+
+.tic-tac-toe-container.tic-tac-toe-row > button {
+  background-color: black;
+}
+
+.tic-tac-toe-row {
+  display: flex;
+  width: 100%;
+  height: 164px;
+}
+
+.tic-tac-toe-button {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--white);
+  color: var(--white);
+  font-size: 80px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.tic-tac-toe-button:disabled:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.player-1-play {
+  color: var(--success);
+}
+
+.player-1-plays:active {
+  border: 4px solid var(--success);
+}
+
+.player-1-plays:hover {
+  background-color: rgba(21, 255, 0, 0.3);
+}
+
+.player-2-play {
+  color: var(--red);
+}
+
+.player-2-plays:active {
+  border: 4px solid var(--red);
+}
+
+.player-2-plays:hover {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.players-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--white);
+  color: var(--white);
+  padding: 1rem;
+  width: 100%;
+}
+
+.players-turn-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.player-1-container,
+.player-2-container,
+.player-1-turn-container,
+.player-2-turn-container {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.player-1-turn-container {
+  border: 3px solid var(--success);
+}
+
+.player-2-turn-container {
+  border: 3px solid var(--red);
+}
+
+@media (max-width: 576px) {
+  .tic-tac-toe-page {
+    max-width: 288px;
+  }
+  .tic-tac-toe-row {
+    height: 96px;
+  }
+  .tic-tac-toe-button {
+    font-size: 48px;
+  }
+  .players-turn-container {
+    flex-wrap: wrap;
+  }
+}

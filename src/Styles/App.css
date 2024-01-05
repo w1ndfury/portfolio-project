@@ -11,7 +11,7 @@ a:hover {
 }
 
 .my-app {
-  background-color: var(--black);
-  color: white;
+  background-color: var(--primary);
+  color: var(--gray);
   font-family: Courier New;
 }

@@ -1,13 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import { Shell } from "./shell";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Shell />
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-reportWebVitals();

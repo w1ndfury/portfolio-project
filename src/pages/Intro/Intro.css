@@ -1,6 +1,7 @@
 .intro-wraper {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 1;
@@ -14,16 +15,15 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  top: var(--navbar-height);
   position: relative;
 }
 
 .ai-question {
-  color: var(--white);
+  color: var(--gray);
 }
 
 .ai-answer {
-  color: var(--white);
+  color: var(--gray);
 }
 
 .fade-in-2 {

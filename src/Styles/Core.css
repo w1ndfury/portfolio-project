@@ -18,6 +18,10 @@
   margin-bottom: 8px;
 }
 
+.pp-margin-bottom-large {
+  margin-bottom: 32px;
+}
+
 .pp-margin-top-default {
   margin-top: 16px;
 }
@@ -62,12 +66,20 @@
   font-size: 50px;
 }
 
+.pp-text-large-80 {
+  font-size: 80px;
+}
+
 .pp-width-100 {
   width: 100%;
 }
 
 .pp-max-width-200 {
   max-width: 200px;
+}
+
+.pp-text-secondary {
+  color: var(--secondary);
 }
 
 .pp-text-red {
@@ -79,7 +91,7 @@
 }
 
 .pp-text-gray {
-  color: var(--gray-1);
+  color: var(--gray);
 }
 
 .pp-text-bold {
@@ -94,15 +106,21 @@
   text-align: start;
 }
 
+.pp-text-align-center {
+  text-align: center;
+}
+
 .pp-input-black {
   padding: 0 0.5rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: var(--white);
-  border: 1px solid var(--white);
+  background-color: var(--primary);
+  color: var(--gray);
+  border: 1px solid var(--gray);
+  height: 42px;
+  border-radius: 4px;
 }
 
 .pp-input-black:hover {
-  border: 1px solid var(--white);
+  border: 1px solid var(--gray);
 }
 
 .pp-input-black:focus,
@@ -110,7 +128,7 @@ textarea:focus,
 select:focus {
   outline-offset: 1px;
   outline: none;
-  outline-color: var(--gray-1);
+  outline-color: var(--gray);
 }
 
 .pp-box-shadow-gray {
@@ -121,9 +139,9 @@ select:focus {
   box-shadow: rgb(255, 255, 255) 0px 1px 15px;
 }
 
-.pp-box-shadow-purple {
-  box-shadow: 0 3px 20px 0 rgba(255, 255, 255, 0.2),
-    0 4px 10px 0 rgba(94, 21, 104, 0.2);
+.pp-box-shadow-primary {
+  box-shadow: 0 3px 50px 0 rgba(102, 252, 241, 0.2),
+    0 4px 10px 0 rgba(0, 0, 0, 1);
 }
 
 .pp-gap-x-small {
@@ -147,9 +165,11 @@ select:focus {
 }
 
 .pp-background-galaxy-1 {
-  background: radial-gradient(
-    circle,
-    rgb(126 74 188 / 40%) 0,
-    rgb(43 38 115) 100%
-  );
+  background: radial-gradient(circle, rgb(0 0 0 / 40%) 0, rgb(17 41 43) 100%);
+}
+
+@media (max-width: 768px) {
+  .tablet-disabled {
+    display: none;
+  }
 }

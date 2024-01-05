@@ -35,7 +35,7 @@ function Experience() {
 
       <div className="timeline-container">
         {workItems?.map((item) => (
-          <div className="timeline-container-row">
+          <div className="timeline-container-row" key={item.number}>
             <TimelineItem active={item.active} />
             <Work
               key={item.number}
