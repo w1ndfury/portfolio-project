@@ -11,19 +11,19 @@ export const router = createBrowserRouter([
     element: <Intro />,
   },
   {
-    path: "/home",
+    path: "/portfolio-project/home",
     element: <LandingPage />,
   },
   {
-    path: "/playground",
+    path: "/portfolio-project/playground",
     element: <Playground />,
   },
   {
-    path: "/piano",
+    path: "/portfolio-project/piano",
     element: <Piano />,
   },
   {
-    path: "/tic-tac-toe",
+    path: "/portfolio-project/tic-tac-toe",
     element: <TicTacToe />,
   },
 ]);

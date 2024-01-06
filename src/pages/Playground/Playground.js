@@ -6,15 +6,15 @@ function Playground() {
   const navigate = useNavigate();
 
   function onHomeClick() {
-    navigate("/home");
+    navigate("/portfolio-project/home");
   }
 
   function onPianoClick() {
-    navigate("/piano");
+    navigate("/portfolio-project/piano");
   }
 
   function onTicTacToeClick() {
-    navigate("/tic-tac-toe");
+    navigate("/portfolio-project/tic-tac-toe");
   }
 
   return (

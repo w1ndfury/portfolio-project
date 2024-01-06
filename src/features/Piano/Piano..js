@@ -102,7 +102,7 @@ function Piano() {
   };
 
   function navigateToPlayground() {
-    navigate("/playground");
+    navigate("/portfolio-project/playground");
   }
 
   return (

@@ -25,7 +25,7 @@ function Intro() {
   function onCompleteGreetingsMessage() {
     setSummaryAnimation(true);
     setTimeout(() => {
-      navigate("/home");
+      navigate("/portfolio-project/home");
     }, 3000);
   }
 

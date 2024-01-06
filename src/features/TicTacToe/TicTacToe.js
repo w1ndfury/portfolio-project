@@ -30,7 +30,7 @@ function TicTacToe() {
   );
 
   function navigateToPlayground() {
-    navigate("/playground");
+    navigate("/portfolio-project/playground");
   }
 
   function playTriggered(squareKey) {

@@ -24,7 +24,7 @@ function SlideBar() {
   };
 
   function onPlaygroundClick() {
-    navigate("/playground");
+    navigate("/portfolio-project/playground");
   }
 
   function onNavbarBrandClick() {
