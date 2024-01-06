@@ -34,7 +34,7 @@ function SlideBar() {
   return (
     <Navbar dark className="pp-navbar pp-box-shadow-primary" expand="sm">
       <Container>
-        <NavbarBrand href="/" onClick={onNavbarBrandClick}>
+        <NavbarBrand href="/portfolio-project" onClick={onNavbarBrandClick}>
           {
             <Typed
               className="typed-text"
