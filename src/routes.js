@@ -7,7 +7,7 @@ import Playground from "./pages/Playground/Playground";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/portfolio-project",
     element: <Intro />,
   },
   {
