@@ -7,9 +7,14 @@
   animation: opacityFadeIn 3s;
 }
 
+.title-text {
+  font-size: 80px;
+}
+
 .subtitle-text {
   margin: 0 auto 1rem;
 }
+
 .description-text {
   margin: auto;
 }
@@ -17,5 +22,8 @@
 @media (max-width: 560px) {
   .about-text {
     padding: 2rem 1rem;
+  }
+  .title-text {
+    font-size: 60px;
   }
 }

@@ -9,7 +9,7 @@ function About() {
 
   return (
     <div className="about-text">
-      <h1 className="pp-text-secondary pp-text-large-80">{title}</h1>
+      <h1 className="pp-text-secondary title-text">{title}</h1>
       <h2 className="pp-text-xx-large subtitle-text pp-text-large-24">
         {subtitle}
       </h2>
