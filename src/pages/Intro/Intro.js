@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Typed from "react-typed";
 import "./Intro.css";
 import PrimaryButton from "../../components/Buttons/PrimaryButton/PrimaryButton";
@@ -20,24 +20,30 @@ function Intro() {
   const [summaryAnimation, setSummaryAnimation] = useState(false);
 
   const navigate = useNavigate();
-  const storedUserName = localStorage.getItem("userName");
 
   function onCompleteGreetingsMessage() {
     setSummaryAnimation(true);
+    redirectToHome();
+  }
+
+  function redirectToHome() {
     setTimeout(() => {
       navigate("/portfolio-project/home");
     }, 3000);
   }
-
   const handleNameChange = () => {
     setShowSummaryMessage(true);
-    localStorage.setItem("userName", userName);
+    sessionStorage.setItem("userName", userName);
   };
+
+  useEffect(() => {
+    sessionStorage.removeItem("userName");
+  }, []);
 
   return (
     <section className="intro-wraper">
       <div className="pp-flex-column">
-        {!storedUserName && !showSummaryMessage && (
+        {!showSummaryMessage && (
           <section>
             <div className="ai-question pp-margin-bottom-x-small pp-text-large-30">
               <Typed

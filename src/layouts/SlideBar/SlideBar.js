@@ -28,7 +28,7 @@ function SlideBar() {
   }
 
   function onNavbarBrandClick() {
-    localStorage.setItem("userName", "");
+    sessionStorage.setItem("userName", "");
   }
 
   return (

@@ -7,7 +7,7 @@ import Footer from "../../layouts/Footer/Footer";
 import SlideBar from "../../layouts/SlideBar/SlideBar";
 
 function LandingPage() {
-  const storedUserName = localStorage.getItem("userName");
+  const storedUserName = sessionStorage.getItem("userName");
 
   if (storedUserName) {
     return (
